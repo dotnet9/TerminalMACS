@@ -1,5 +1,5 @@
-# HM Monitoring System
-# HM多终端监控系统
+# TerminalMACS(Terminal Manager And Check System)
+# 终端管理和检测系统
 ## 一、本系统可监控多种终端资源：
 
 移动端
@@ -13,17 +13,17 @@ PC端
 
 ## 二、整个系统分为三类进程：
 
-1. 被监控端
+1. 被监控端(Client)
 
 被控端用于获取终端数据，共5个进程，包括：
 - 移动被控端（Android、iOS）；
 - PC被控端(Windows、Linux、Mac)。
 
-2. 服务端
+2. 服务端(Server)
 
 用于与被控端和管理端数据中转，包括获取被控端数据、向被控端发送命令、向管理端发送数据等，1个进程。
 
-3. 管理端
+3. 管理端(Manager)
 
 用于监视被控端，展示被控端数据、命令交互等，共6个进程，包括：
 - 移动管理端（Android、iOS）；
@@ -34,8 +34,8 @@ PC端
 
 ## 三、各子模块技术栈
 
-1. 被监控端
-- 移动被控端（Android、iOS）：flutter + sqlite。
+1. 被监控端(Client)
+- 移动被控端（Android、iOS）：xamarin.forms + sqlite。
 - PC被控端(Windows、Linux、Mac)：C# 控制台。
 
 2. 服务端
