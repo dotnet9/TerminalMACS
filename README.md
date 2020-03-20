@@ -34,7 +34,7 @@ PC端
 
 ## 三、各子模块技术栈
 
-1. 被监控端(Client)
+1. 被控端(Client)
 - 移动被控端（Android、iOS）：xamarin.forms + sqlite。
 - PC被控端(Windows、Linux、Mac)：C# 控制台。
 
@@ -46,3 +46,8 @@ PC端
 - 移动管理端（Android、iOS）：flutter + sqlite。
 - PC管理端(Windows)：C# + WPF。
 - PC管理端(Linux、Mac)：C++ + Qt Quick。
+
+## 四、开发进度
+2020-03-21
+项目才计划不久，先开发移动被控端基本功能：
+1. 获取通讯录数据
