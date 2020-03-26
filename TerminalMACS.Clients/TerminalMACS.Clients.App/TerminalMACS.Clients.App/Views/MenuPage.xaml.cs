@@ -20,8 +20,9 @@ namespace TerminalMACS.Clients.App.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem{ Id=MenuItemType.Contacts,Title="通讯录"},
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="浏览" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="关于" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

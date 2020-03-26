@@ -8,9 +8,12 @@ namespace TerminalMACS.Clients.App
 {
     public partial class App : Application
     {
-
-        public App()
+        public static App Instance { get; private set; }
+        public IContactsService ContactsService { get; private set; }
+        public App(IContactsService contactsService)
         {
+            Instance = this;
+            ContactsService = contactsService;
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();

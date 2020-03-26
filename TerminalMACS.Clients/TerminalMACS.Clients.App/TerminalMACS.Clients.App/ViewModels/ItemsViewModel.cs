@@ -17,7 +17,7 @@ namespace TerminalMACS.Clients.App.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "浏览";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

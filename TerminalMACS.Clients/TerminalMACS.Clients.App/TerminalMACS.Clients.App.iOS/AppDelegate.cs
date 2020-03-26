@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using TerminalMACS.Clients.App.iOS.Services;
+using TerminalMACS.Clients.App.Services;
 using UIKit;
 
 namespace TerminalMACS.Clients.App.iOS
@@ -13,6 +15,7 @@ namespace TerminalMACS.Clients.App.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
+        IContactsService contactsService = new ContactsService();
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -23,7 +26,7 @@ namespace TerminalMACS.Clients.App.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(contactsService));
 
             return base.FinishedLaunching(app, options);
         }
