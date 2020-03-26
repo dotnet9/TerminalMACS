@@ -13,7 +13,7 @@ PC端
 
 ## 二、整个系统分为三类进程：
 
-1. 被监控端(Client)
+1. 被控端(Client)
 
 被控端用于获取终端数据，共5个进程，包括：
 - 移动被控端（Android、iOS）；
@@ -43,7 +43,7 @@ PC端
 .NET 5 WEB API + Entity Framework Core(MySql、MSSQL）+ Redis。
 
 3. 管理端
-- 移动管理端（Android、iOS）：flutter + sqlite。
+- 移动管理端（Android、iOS）：xamarin.forms + sqlite。
 - PC管理端(Windows)：C# + WPF。
 - PC管理端(Linux、Mac)：C++ + Qt Quick。
 
@@ -51,3 +51,4 @@ PC端
 2020-03-21
 项目才计划不久，先开发移动被控端基本功能：
 1. 获取通讯录数据
+参考文章：[Getting phone contacts in Xamarin Forms](https://www.xamboy.com/2019/10/10/getting-phone-contacts-in-xamarin-forms/)
