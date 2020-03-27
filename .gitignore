@@ -4,11 +4,11 @@
 
 /.vs
 /output/Clients/com.companyname.terminalmacs.clients.app.apk
-/TerminalMACS.Clients/TerminalMACS.Clients.App/.vs/TerminalMACS.Clients.App
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/bin
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/obj
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/bin
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/obj
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/bin
-/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/.vs/TerminalMACS.Clients.App
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/bin
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/obj
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/bin
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/obj
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/bin
+/src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
 *.user
