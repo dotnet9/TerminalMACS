@@ -10,7 +10,7 @@ namespace TerminalMACS.Clients.App.ViewModels
         public AboutViewModel()
         {
             Title = "关于";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://xamarin.com"));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/dotnet9/TerminalMACS"));
         }
 
         public ICommand OpenWebCommand { get; }

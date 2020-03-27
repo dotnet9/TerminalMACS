@@ -14,7 +14,7 @@ namespace TerminalMACS.Clients.App.ViewModels
     {
         IContactsService _contactService;
 
-        public string Title => "通讯录";
+        public new string Title => "通讯录";
 
         public string SearchText { get; set; }
         public ObservableCollection<Contact> Contacts { get; set; }
