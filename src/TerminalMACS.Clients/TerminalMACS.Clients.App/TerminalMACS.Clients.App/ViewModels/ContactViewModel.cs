@@ -10,19 +10,35 @@ using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
+    /// <summary>
+    /// 通讯录ViewModel
+    /// </summary>
     public class ContactViewModel : BaseViewModel
     {
+        /// <summary>
+        /// 通讯录服务接口
+        /// </summary>
         IContactsService _contactService;
-
+        /// <summary>
+        /// 标题
+        /// </summary>
         public new string Title => "通讯录";
-
+        /// <summary>
+        /// 搜索关键字
+        /// </summary>
         public string SearchText { get; set; }
+        /// <summary>
+        /// 通讯录列表
+        /// </summary>
         public ObservableCollection<Contact> Contacts { get; set; }
+        /// <summary>
+        /// 通讯录过滤列表
+        /// </summary>
         public ObservableCollection<Contact> FilteredContacts
         {
             get
             {
-                return string.IsNullOrEmpty(SearchText) ? Contacts 
+                return string.IsNullOrEmpty(SearchText) ? Contacts
                                                         : new ObservableCollection<Contact>(Contacts?.ToList()
                                                         ?.Where(s => !string.IsNullOrEmpty(s.Name) && s.Name.ToLower().Contains(SearchText.ToLower())));
             }
@@ -45,11 +61,21 @@ namespace TerminalMACS.Clients.App.ViewModels
                 accessMethod?.Invoke();
             }
         }
-
+        
+        /// <summary>
+        /// 收到事件通知，读取一条通讯录信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OnContactLoaded(object sender, ContactEventArgs e)
         {
             Contacts.Add(e.Contact);
         }
+
+        /// <summary>
+        /// 异步读取终端通讯录
+        /// </summary>
+        /// <returns></returns>
         async Task LoadContacts()
         {
             try

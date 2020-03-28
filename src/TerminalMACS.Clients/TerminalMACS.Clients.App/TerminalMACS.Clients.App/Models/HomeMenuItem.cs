@@ -7,7 +7,6 @@ namespace TerminalMACS.Clients.App.Models
     public enum MenuItemType
     {
         Contacts,
-        Browse,
         About
     }
     public class HomeMenuItem

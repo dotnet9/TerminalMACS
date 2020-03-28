@@ -5,6 +5,9 @@ using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
+    /// <summary>
+    /// 关于页面ViewModel
+    /// </summary>
     public class AboutViewModel : BaseViewModel
     {
         public AboutViewModel()

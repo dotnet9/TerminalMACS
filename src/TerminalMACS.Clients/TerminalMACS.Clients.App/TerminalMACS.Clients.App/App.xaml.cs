@@ -16,7 +16,6 @@ namespace TerminalMACS.Clients.App
             ContactsService = contactsService;
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
 

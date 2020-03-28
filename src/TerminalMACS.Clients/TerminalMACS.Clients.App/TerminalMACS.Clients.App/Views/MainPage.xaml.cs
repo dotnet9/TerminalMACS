@@ -9,8 +9,9 @@ using TerminalMACS.Clients.App.Models;
 
 namespace TerminalMACS.Clients.App.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
+    /// <summary>
+    /// 主页
+    /// </summary>
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
@@ -21,7 +22,7 @@ namespace TerminalMACS.Clients.App.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.About, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -32,9 +33,6 @@ namespace TerminalMACS.Clients.App.Views
                 {
                     case (int)MenuItemType.Contacts:
                         MenuPages.Add(id, new NavigationPage(new ContactPage()));
-                        break;
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));

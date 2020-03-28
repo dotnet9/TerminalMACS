@@ -10,9 +10,11 @@ using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
+    /// <summary>
+    /// ViewModel基类
+    /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
 
         bool isBusy = false;
         public bool IsBusy

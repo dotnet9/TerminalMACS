@@ -21,13 +21,12 @@ namespace TerminalMACS.Clients.App.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem{ Id=MenuItemType.Contacts,Title="通讯录"},
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="浏览" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="关于" }
             };
 
             ListViewMenu.ItemsSource = menuItems;
 
-            ListViewMenu.SelectedItem = menuItems[0];
+            ListViewMenu.SelectedItem = menuItems[menuItems.Count - 1];     //显示关于界面
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

@@ -49,7 +49,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="远程终端检测与管理之" />
+                                <Span Text="远程终端检测与管理系统之" />
                                 <Span Text=" " />
                                 <Span Text="移动终端" FontAttributes="Bold" />
                                 <Span Text="." />

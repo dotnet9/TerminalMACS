@@ -5,9 +5,10 @@ using Xamarin.Forms.Xaml;
 
 namespace TerminalMACS.Clients.App.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    /// <summary>
+    /// 关于页面，显示本项目信息
+    /// </summary>
+    [DesignTimeVisible(true)]
     public partial class AboutPage : ContentPage
     {
         public AboutPage()
