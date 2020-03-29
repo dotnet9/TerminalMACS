@@ -1,5 +1,5 @@
 # TerminalMACS(Terminal Manager And Check System)
-# 终端管理和检测系统
+# 远程终端管理和检测系统
 ## 一、本系统可监控多种终端资源：
 
 移动端
@@ -15,7 +15,7 @@ PC端
 
 1. 被控端(Client)
 
-被控端用于获取终端数据，共5个进程，包括：
+被控端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，共5个进程，包括：
 - 移动被控端（Android、iOS）；
 - PC被控端(Windows、Linux、Mac)。
 
@@ -40,10 +40,10 @@ PC端
 
 2. 服务端
 
-.NET 5 WEB API + Entity Framework Core(MySql、MSSQL）+ Redis。
+.NET 5 WEB API + Entity Framework Core(MySql）+ Redis + RabbitMQ。
 
 3. 管理端
-- 移动管理端（Android、iOS）：xamarin.forms + sqlite。
+- 移动管理端（Android、iOS）：flutter + sqlite。
 - PC管理端(Windows)：C# + WPF。
 - PC管理端(Linux、Mac)：C++ + Qt Quick。
 
@@ -52,3 +52,9 @@ PC端
 项目才计划不久，先开发移动被控端基本功能：
 1. 获取通讯录数据
 参考文章：[Getting phone contacts in Xamarin Forms](https://www.xamboy.com/2019/10/10/getting-phone-contacts-in-xamarin-forms/)
+
+参考上面的文章，Android获取通讯录功能已经完成并测试，iOS由于没有相关环境，iOS代码是已经添加了，只是未测试，有条件的同学可以帮忙测试下。
+
+下面是部分截图，稍作整理，出篇文章介绍获取通讯录功能代码，大部分是参考上面的文章。
+
+本项目源码已经开源：https://github.com/dotnet9/TerminalMACS
