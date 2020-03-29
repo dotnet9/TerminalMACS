@@ -1,6 +1,8 @@
 # TerminalMACS(Terminal Manager And Check System)
 # 远程终端管理和检测系统
 
+本文同步更新地址：https://dotnet9.com/11429.html
+
 ![TerminalMACS思维导图](docs/imgs/first_workprogress.png)
 
 ## 一、本系统可监控多种终端资源：
