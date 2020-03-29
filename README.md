@@ -53,8 +53,11 @@ PC端
 1. 获取通讯录数据
 参考文章：[Getting phone contacts in Xamarin Forms](https://www.xamboy.com/2019/10/10/getting-phone-contacts-in-xamarin-forms/)
 
-参考上面的文章，Android获取通讯录功能已经完成并测试，iOS由于没有相关环境，iOS代码是已经添加了，只是未测试，有条件的同学可以帮忙测试下。
+参考上面的文章，Android获取通讯录功能已经完成大部分（获取所有通讯录信息并展示），iOS由于没有相关环境，iOS代码是已经添加了，只是未测试，有条件的同学可以帮忙测试下。
 
 下面是部分截图，稍作整理，出篇文章介绍获取通讯录功能代码，大部分是参考上面的文章。
+![关于移动客户端](docs/imgs/About_MobileClient.jpg)
+
+![通讯录-移动客户端](docs/imgs/Contact_MoibleClient.jpg)
 
 本项目源码已经开源：https://github.com/dotnet9/TerminalMACS
