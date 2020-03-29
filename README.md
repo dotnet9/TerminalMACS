@@ -1,7 +1,9 @@
 # TerminalMACS
-# 远程终端管理与检测系统(Terminal Manager And Check System)
+# 多终端管理系统(Multi Terminal Managerial System)
 
-本文同步更新地址：https://dotnet9.com/11429.html，https://terminalmacs.com（正在备案）。
+本文同步更新地址：
+- https://dotnet9.com/11429.html
+- https://terminalmacs.com
 
 本系统使用技术栈较多：c/s(wpf + prism + log4net, qt quick + ctk + log4qt)、b/s(vue + element ui + .net web api)、移动端（xamarin.forms, flutter）。
 
@@ -23,19 +25,19 @@ PC端
 
 ## 二、整个系统分为三类进程：
 
-1. 被控端(Client)
+1. 客户端(Client)
 
-被控端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，共5个进程，包括：
-- 移动被控端（Android、iOS）；
-- PC被控端(Windows、Linux、Mac)。
+客户端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，共5个进程，包括：
+- 移动客户端（Android、iOS）；
+- PC客户端(Windows、Linux、Mac)。
 
 2. 服务端(Server)
 
-用于与被控端和管理端数据中转，包括获取被控端数据、向被控端发送命令、向管理端发送数据等，1个进程。
+用于与客户端和管理端数据中转，包括获取客户端数据、向客户端发送命令、向管理端发送数据等，1个进程。
 
 3. 管理端(Manager)
 
-用于监视被控端，展示被控端数据、命令交互等，共6个进程，包括：
+用于管理客户端，展示客户端数据、命令交互等，共6个进程，包括：
 - 移动管理端（Android、iOS）；
 - PC管理端(Windows、Linux、Mac)；
 - B/S管理端。
@@ -44,9 +46,9 @@ PC端
 
 ## 三、各子模块技术栈
 
-1. 被控端(Client)
-- 移动被控端（Android、iOS）：xamarin.forms + sqlite。
-- PC被控端(Windows、Linux、Mac)：C# 控制台。
+1. 客户端(Client)
+- 移动客户端（Android、iOS）：xamarin.forms + sqlite。
+- PC客户端(Windows、Linux、Mac)：C# 控制台。
 
 2. 服务端
 
@@ -59,7 +61,7 @@ PC端
 
 ## 四、开发进度
 2020-03-21
-项目才计划不久，先开发移动被控端基本功能：
+项目才计划不久，先开发移动客户端基本功能：
 1. 获取通讯录数据
 参考文章：[Getting phone contacts in Xamarin Forms](https://www.xamboy.com/2019/10/10/getting-phone-contacts-in-xamarin-forms/)
 
