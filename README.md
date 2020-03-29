@@ -3,7 +3,7 @@
 
 本文同步更新地址：
 - https://dotnet9.com/11429.html
-- https://terminalmacs.com
+- https://terminalmacs.com/813.html
 
 本系统使用技术栈较多：c/s(wpf + prism + log4net, qt quick + ctk + log4qt)、b/s(vue + element ui + .net web api)、移动端（xamarin.forms, flutter）。
 
