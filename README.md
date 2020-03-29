@@ -1,8 +1,13 @@
-# TerminalMACS(Terminal Manager And Check System)
-# 远程终端管理和检测系统
+# TerminalMACS
+# 远程终端管理与检测系统(Terminal Manager And Check System)
 
-本文同步更新地址：https://dotnet9.com/11429.html
+本文同步更新地址：https://dotnet9.com/11429.html，https://terminalmacs.com（正在备案）。
 
+本系统使用技术栈较多：c/s(wpf + prism + log4net, qt quick + ctk + log4qt)、b/s(vue + element ui + .net web api)、移动端（xamarin.forms, flutter）。
+
+计划开发周期1年以上（2020-03-21开始）。
+
+TerminalMACS思维导图
 ![TerminalMACS思维导图](docs/imgs/first_workprogress.png)
 
 ## 一、本系统可监控多种终端资源：
