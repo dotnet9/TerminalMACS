@@ -58,6 +58,6 @@ PC端
 下面是部分截图，稍作整理，出篇文章介绍获取通讯录功能代码，大部分是参考上面的文章。
 ![关于移动客户端](docs/imgs/About_MobileClient.jpg)
 
-![通讯录-移动客户端](docs/imgs/Contact_MoibleClient.jpg)
+![通讯录-移动客户端](docs/imgs/Contact_MobileClient.jpg)
 
 本项目源码已经开源：https://github.com/dotnet9/TerminalMACS
