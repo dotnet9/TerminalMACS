@@ -1,5 +1,8 @@
 # TerminalMACS(Terminal Manager And Check System)
 # 远程终端管理和检测系统
+
+![TerminalMACS思维导图](docs/imgs/first_workprogress.png)
+
 ## 一、本系统可监控多种终端资源：
 
 移动端
