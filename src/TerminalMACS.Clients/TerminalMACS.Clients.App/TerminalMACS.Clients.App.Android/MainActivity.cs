@@ -1,14 +1,10 @@
-﻿using System;
-
+﻿using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
-using TerminalMACS.Clients.App.Services;
+using Android.Runtime;
 using TerminalMACS.Clients.App.Droid.Services;
-using Acr.UserDialogs;
+using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.Droid
 {
