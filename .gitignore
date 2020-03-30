@@ -3,7 +3,6 @@
 ################################################################################
 
 /.vs
-/output/Clients/com.companyname.terminalmacs.clients.app.apk
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/.vs
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/bin
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/obj
