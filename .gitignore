@@ -12,3 +12,9 @@
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/bin
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
 *.user
+TerminalMACS.Clients/TerminalMACS.Clients.App/.vs
+TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/bin
+TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/obj
+TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
+TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/bin
+TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/obj

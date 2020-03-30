@@ -1,11 +1,14 @@
-# TerminalMACS
-# 多终端管理系统(Multi Terminal Managerial System)
+# TerminalMACS-多终端管理与检测系统
+
+中文全称：多终端管理与检测系统
+
+英文简称：TerminaMACS，全称：Terminal Management and Check System
 
 本文同步更新地址：
 - https://dotnet9.com/11429.html
 - https://terminalmacs.com/813.html
 
-本系统使用技术栈较多：c/s(wpf + prism + log4net, qt quick + ctk + log4qt)、b/s(vue + element ui + .net web api)、移动端（xamarin.forms, flutter）。
+本系统使用技术栈较多：C/S(WPF + Prism + log4net, Qt Quick + CTK + log4qt)、B/S(Vue + Element UI + .Net Web API)、移动端（Xamarin.Forms, Flutter、Android原生(Java、Kotlin)）。 
 
 计划开发周期1年以上（2020-03-21开始）。
 
@@ -27,27 +30,25 @@ PC端
 
 1. 客户端(Client)
 
-客户端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，共5个进程，包括：
+客户端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，包括：
 - 移动客户端（Android、iOS）；
 - PC客户端(Windows、Linux、Mac)。
 
 2. 服务端(Server)
 
-用于与客户端和管理端数据中转，包括获取客户端数据、向客户端发送命令、向管理端发送数据等，1个进程。
+用于与客户端和管理端数据中转，包括获取客户端数据、向客户端发送命令、向管理端发送数据等。
 
 3. 管理端(Manager)
 
-用于管理客户端，展示客户端数据、命令交互等，共6个进程，包括：
+用于管理客户端，展示客户端数据、命令交互等，包括：
 - 移动管理端（Android、iOS）；
 - PC管理端(Windows、Linux、Mac)；
 - B/S管理端。
 
-三类进程共12个，即12个子模块（或子系统）。
-
 ## 三、各子模块技术栈
 
 1. 客户端(Client)
-- 移动客户端（Android、iOS）：xamarin.forms + sqlite。
+- 移动客户端（Android、iOS）：跨平台版本1（C# + Xamarin.Forms）、跨平台版本2（Dart + Flutter）、Android原生(Java、Kotlin)。
 - PC客户端(Windows、Linux、Mac)：C# 控制台。
 
 2. 服务端
@@ -55,9 +56,9 @@ PC端
 .NET 5 WEB API + Entity Framework Core(MySql）+ Redis + RabbitMQ。
 
 3. 管理端
-- 移动管理端（Android、iOS）：flutter + sqlite。
+- 移动管理端（Android、iOS）：跨平台版本1（C# + Xamarin.Forms）、跨平台版本2（Dart + Flutter）、Android原生(Java、Kotlin)。
 - PC管理端(Windows)：C# + WPF。
-- PC管理端(Linux、Mac)：C++ + Qt Quick。
+- PC管理端(Windows、Linux、Mac)：C++ + Qt Quick。
 
 ## 四、开发进度
 2020-03-21
