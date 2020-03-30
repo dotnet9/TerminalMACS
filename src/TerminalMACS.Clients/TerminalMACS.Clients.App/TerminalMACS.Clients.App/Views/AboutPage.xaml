@@ -57,18 +57,16 @@
                     </Label.FormattedText>
                 </Label>
                 <Label Text="欢迎提出宝贵意见" />
-                <Label Text="Dotnet9：https://dotnet9.com" FontAttributes="Bold" />
-                <Label Text="TerminalMACS：https://terminalmacs.com" FontAttributes="Bold"/>
                 <Button Margin="0,10,0,0" Text="Dotnet9"
-                        Command="{Binding OpenDotnet9WebCommand}"
+                        Command="{Binding RaiseOpenDotnet9WebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
                 <Button Margin="0,10,0,0" Text="{Binding SystemName}"
-                        Command="{Binding OpenTerminalMACSWebCommand}"
+                        Command="{Binding RaiseOpenTerminalMACSWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
                 <Button Margin="0,10,0,0" Text="查看源码"
-                        Command="{Binding OpenCurrentClientSourceWebCommand}"
+                        Command="{Binding RaiseOpenCurrentClientSourceWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>

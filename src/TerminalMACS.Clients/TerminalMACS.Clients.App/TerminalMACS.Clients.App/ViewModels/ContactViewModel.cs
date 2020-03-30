@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
@@ -38,22 +39,22 @@ namespace TerminalMACS.Clients.App.ViewModels
         /// <summary>
         /// 通讯录搜索命令
         /// </summary>
-        public ICommand SearchCommand { get; }
+        public ICommand RaiseSearchCommand { get; }
         /// <summary>
         /// 通讯录列表
         /// </summary>
         public ObservableCollection<Contact> Contacts { get; set; }
+        private List<Contact> _FilteredContacts;
         /// <summary>
         /// 通讯录过滤列表
         /// </summary>
-        public ObservableCollection<Contact> FilteredContacts
+        public List<Contact> FilteredContacts
+
         {
-            get
+            get { return _FilteredContacts; }
+            set
             {
-                return string.IsNullOrEmpty(SearchText) ? Contacts
-                                                        : new ObservableCollection<Contact>(Contacts?.ToList()
-                                                        ?.Where(s => (!string.IsNullOrWhiteSpace(s.Name) && s.Name.ToLower().Contains(SearchText.ToLower()))
-                                                        || (s.PhoneNumbers.Length > 0 && s.PhoneNumbers.ToList().Exists(cu => cu.ToString().Contains(SearchText)))));
+                SetProperty(ref _FilteredContacts, value);
             }
         }
         public ContactViewModel(IContactsService contactService)
@@ -63,14 +64,33 @@ namespace TerminalMACS.Clients.App.ViewModels
             Xamarin.Forms.BindingBase.EnableCollectionSynchronization(Contacts, null, ObservableCollectionCallback);
             _contactService.OnContactLoaded += OnContactLoaded;
             LoadContacts();
+            RaiseSearchCommand = new Command(RaiseSearchHandle);
+        }
 
-
-            SearchCommand = new Command(async () =>
+        /// <summary>
+        /// 过滤通讯录
+        /// </summary>
+        void RaiseSearchHandle()
+        {
+            if (string.IsNullOrEmpty(SearchText))
             {
-                var contacts = FilteredContacts;
-                Console.WriteLine($"过滤后通讯录有：{contacts.Count}条");
-                await Task.FromResult(FilteredContacts);
-            });
+                FilteredContacts = Contacts.ToList();
+                return;
+            }
+
+            Func<Contact, bool> checkContact = (s) =>
+            {
+                if (!string.IsNullOrWhiteSpace(s.Name) && s.Name.ToLower().Contains(SearchText.ToLower()))
+                {
+                    return true;
+                }
+                else if (s.PhoneNumbers.Length > 0 && s.PhoneNumbers.ToList().Exists(cu => cu.ToString().Contains(SearchText)))
+                {
+                    return true;
+                }
+                return false;
+            };
+            FilteredContacts = Contacts.ToList().Where(checkContact).ToList();
         }
 
         /// <summary>
@@ -97,6 +117,7 @@ namespace TerminalMACS.Clients.App.ViewModels
         private void OnContactLoaded(object sender, ContactEventArgs e)
         {
             Contacts.Add(e.Contact);
+            RaiseSearchHandle();
         }
 
         /// <summary>

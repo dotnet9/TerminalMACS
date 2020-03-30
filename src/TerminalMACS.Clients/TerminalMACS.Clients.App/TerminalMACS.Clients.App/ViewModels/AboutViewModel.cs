@@ -28,13 +28,13 @@ namespace TerminalMACS.Clients.App.ViewModels
         public AboutViewModel()
         {
             Title = "关于";
-            OpenDotnet9WebCommand = new Command(async () => await Browser.OpenAsync("https://dotnet9.com/category/terminalmacs/terminalmacs_client/xamarin-forms-terminalmacs_client"));
-            OpenTerminalMACSWebCommand = new Command(async () => await Browser.OpenAsync("https://terminalmacs.com/category/client/xamarin-forms"));
-            OpenCurrentClientSourceWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/dotnet9/TerminalMACS/tree/master/src/TerminalMACS.Clients/TerminalMACS.Clients.App"));
+            RaiseOpenDotnet9WebCommand = new Command(async () => await Browser.OpenAsync("https://dotnet9.com/category/terminalmacs/terminalmacs_client/xamarin-forms-terminalmacs_client"));
+            RaiseOpenTerminalMACSWebCommand = new Command(async () => await Browser.OpenAsync("https://terminalmacs.com/category/client/xamarin-forms"));
+            RaiseOpenCurrentClientSourceWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/dotnet9/TerminalMACS/tree/master/src/TerminalMACS.Clients/TerminalMACS.Clients.App"));
         }
 
-        public ICommand OpenDotnet9WebCommand { get; }
-        public ICommand OpenTerminalMACSWebCommand { get; }
-        public ICommand OpenCurrentClientSourceWebCommand { get; }
+        public ICommand RaiseOpenDotnet9WebCommand { get; }
+        public ICommand RaiseOpenTerminalMACSWebCommand { get; }
+        public ICommand RaiseOpenCurrentClientSourceWebCommand { get; }
     }
 }
