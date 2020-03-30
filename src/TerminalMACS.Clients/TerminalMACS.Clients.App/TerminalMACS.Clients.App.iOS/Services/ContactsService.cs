@@ -11,6 +11,9 @@ using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.iOS.Services
 {
+    /// <summary>
+    /// 通讯录获取服务
+    /// </summary>
     public class ContactsService : NSObject, IContactsService
     {
         const string ThumbnailPrefix = "thumb";
@@ -22,36 +25,10 @@ namespace TerminalMACS.Clients.App.iOS.Services
         bool _isLoading = false;
         public bool IsLoading => _isLoading;
 
-        public async Task<IList<Contact>> RetrieveContactsAsync(CancellationToken? cancelToken = null)
-        {
-            requestStop = false;
-
-            if (!cancelToken.HasValue)
-                cancelToken = CancellationToken.None;
-
-            // We create a TaskCompletionSource of decimal
-            var taskCompletionSource = new TaskCompletionSource<IList<Contact>>();
-
-            // Registering a lambda into the cancellationToken
-            cancelToken.Value.Register(() =>
-            {
-                // We received a cancellation message, cancel the TaskCompletionSource.Task
-                requestStop = true;
-                taskCompletionSource.TrySetCanceled();
-            });
-
-            _isLoading = true;
-
-            var task = LoadContactsAsync();
-
-            // Wait for the first task to finish among the two
-            var completedTask = await Task.WhenAny(task, taskCompletionSource.Task);
-            _isLoading = false;
-
-            return await completedTask;
-
-        }
-
+        /// <summary>
+        /// 异步请求权限
+        /// </summary>
+        /// <returns></returns>
         public async Task<bool> RequestPermissionAsync()
         {
             var status = CNContactStore.GetAuthorizationStatus(CNEntityType.Contacts);
@@ -69,6 +46,45 @@ namespace TerminalMACS.Clients.App.iOS.Services
 
         }
 
+        /// <summary>
+        /// 异步请求通讯录，此方法由界面真正调用
+        /// </summary>
+        /// <param name="cancelToken"></param>
+        /// <returns></returns>
+        public async Task<IList<Contact>> RetrieveContactsAsync(CancellationToken? cancelToken = null)
+        {
+            requestStop = false;
+
+            if (!cancelToken.HasValue)
+                cancelToken = CancellationToken.None;
+
+            // 我们创建了一个十进制的TaskCompletionSource
+            var taskCompletionSource = new TaskCompletionSource<IList<Contact>>();
+
+            // 在cancellationToken中注册lambda
+            cancelToken.Value.Register(() =>
+            {
+                // 我们收到一条取消消息，取消TaskCompletionSource.Task
+                requestStop = true;
+                taskCompletionSource.TrySetCanceled();
+            });
+
+            _isLoading = true;
+
+            var task = LoadContactsAsync();
+
+            // 等待两个任务中的第一个任务完成
+            var completedTask = await Task.WhenAny(task, taskCompletionSource.Task);
+            _isLoading = false;
+
+            return await completedTask;
+
+        }
+
+        /// <summary>
+        /// 异步加载通讯录，具体的通讯录读取方法
+        /// </summary>
+        /// <returns></returns>
         async Task<IList<Contact>> LoadContactsAsync()
         {
             IList<Contact> contacts = new List<Contact>();

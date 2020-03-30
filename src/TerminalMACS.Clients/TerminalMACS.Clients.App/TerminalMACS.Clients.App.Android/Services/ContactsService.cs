@@ -1,29 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using Acr.UserDialogs;
+﻿using Acr.UserDialogs;
 using Android;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Database;
-using Android.OS;
 using Android.Provider;
 using Android.Runtime;
 using Android.Support.V4.App;
-using Android.Views;
-using Android.Widget;
-using Castle.Core.Internal;
 using Plugin.CurrentActivity;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using TerminalMACS.Clients.App.Models;
 using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.Droid.Services
 {
+    /// <summary>
+    /// 通讯录获取服务
+    /// </summary>
     public class ContactsService : IContactsService
     {
         const string ThumbnailPrefix = "thumb";
@@ -38,41 +36,50 @@ namespace TerminalMACS.Clients.App.Droid.Services
         }
         bool _isLoading = false;
         public bool IsLoading => _isLoading;
-
+        //权限请求状态码
         public const int RequestContacts = 1239;
+        /// <summary>
+        /// 获取通讯录需要的请求权限
+        /// </summary>
         static string[] PermissionsContact = {
             Manifest.Permission.ReadContacts
         };
 
         public event EventHandler<ContactEventArgs> OnContactLoaded;
-
+        /// <summary>
+        /// 异步请求通讯录权限
+        /// </summary>
         async void RequestContactsPermissions()
         {
+            //检查是否可以弹出申请读、写通讯录权限
             if (ActivityCompat.ShouldShowRequestPermissionRationale(CrossCurrentActivity.Current.Activity, Manifest.Permission.ReadContacts)
                 || ActivityCompat.ShouldShowRequestPermissionRationale(CrossCurrentActivity.Current.Activity, Manifest.Permission.WriteContacts))
             {
-
-                // Provide an additional rationale to the user if the permission was not granted
-                // and the user would benefit from additional context for the use of the permission.
-                // For example, if the request has been denied previously.
-
-                await UserDialogs.Instance.AlertAsync("Contacts Permission", "This action requires contacts permission", "Ok");
+                // 如果未授予许可，请向用户提供其他理由用户将从使用权限的附加上下文中受益。
+                // 例如，如果请求先前被拒绝。
+                await UserDialogs.Instance.AlertAsync("通讯录权限", "此操作需要“通讯录”权限", "确定");
             }
             else
             {
-                // Contact permissions have not been granted yet. Request them directly.
+                // 尚未授予通讯录权限。直接请求这些权限。
                 ActivityCompat.RequestPermissions(CrossCurrentActivity.Current.Activity, PermissionsContact, RequestContacts);
             }
         }
+
+        /// <summary>
+        /// 收到用户响应请求权限操作后的结果
+        /// </summary>
+        /// <param name="requestCode"></param>
+        /// <param name="permissions"></param>
+        /// <param name="grantResults"></param>
         public static void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
-            if (requestCode == ContactsService.RequestContacts)
+            if (requestCode == RequestContacts)
             {
-                // We have requested multiple permissions for contacts, so all of them need to be
-                // checked.
+                // 我们请求了多个通讯录权限，因此需要检查相关的所有权限
                 if (PermissionUtil.VerifyPermissions(grantResults))
                 {
-                    // All required permissions have been granted, display contacts fragment.
+                    // 已授予所有必需的权限，显示联系人片段。
                     contactPermissionTcs.TrySetResult(true);
                 }
                 else
@@ -83,25 +90,35 @@ namespace TerminalMACS.Clients.App.Droid.Services
             }
         }
 
+        /// <summary>
+        /// 异步请求权限
+        /// </summary>
+        /// <returns></returns>
         public async Task<bool> RequestPermissionAsync()
         {
             contactPermissionTcs = new TaskCompletionSource<bool>();
-            // Verify that all required contact permissions have been granted.
+
+            // 验证是否已授予所有必需的通讯录权限。
             if (Android.Support.V4.Content.ContextCompat.CheckSelfPermission(CrossCurrentActivity.Current.Activity, Manifest.Permission.ReadContacts) != (int)Permission.Granted
                 || Android.Support.V4.Content.ContextCompat.CheckSelfPermission(CrossCurrentActivity.Current.Activity, Manifest.Permission.WriteContacts) != (int)Permission.Granted)
             {
-                // Contacts permissions have not been granted.
+                // 尚未授予通讯录权限。
                 RequestContactsPermissions();
             }
             else
             {
-                // Contact permissions have been granted. 
+                // 已授予通讯录权限。
                 contactPermissionTcs.TrySetResult(true);
             }
 
             return await contactPermissionTcs.Task;
         }
 
+        /// <summary>
+        /// 异步请求通讯录，此方法由界面真正调用
+        /// </summary>
+        /// <param name="cancelToken"></param>
+        /// <returns></returns>
         public async Task<IList<Contact>> RetrieveContactsAsync(CancellationToken? cancelToken = null)
         {
             stopLoad = false;
@@ -109,13 +126,13 @@ namespace TerminalMACS.Clients.App.Droid.Services
             if (!cancelToken.HasValue)
                 cancelToken = CancellationToken.None;
 
-            // We create a TaskCompletionSource of decimal
+            // 我们创建了一个十进制的TaskCompletionSource
             var taskCompletionSource = new TaskCompletionSource<IList<Contact>>();
 
-            // Registering a lambda into the cancellationToken
+            // 在cancellationToken中注册lambda
             cancelToken.Value.Register(() =>
             {
-                // We received a cancellation message, cancel the TaskCompletionSource.Task
+                // 我们收到一条取消消息，取消TaskCompletionSource.Task
                 stopLoad = true;
                 taskCompletionSource.TrySetCanceled();
             });
@@ -124,51 +141,66 @@ namespace TerminalMACS.Clients.App.Droid.Services
 
             var task = LoadContactsAsync();
 
-            // Wait for the first task to finish among the two
+            // 等待两个任务中的第一个任务完成
             var completedTask = await Task.WhenAny(task, taskCompletionSource.Task);
             _isLoading = false;
 
             return await completedTask;
         }
+
+        /// <summary>
+        /// 异步加载通讯录，具体的通讯录读取方法
+        /// </summary>
+        /// <returns></returns>
         async Task<IList<Contact>> LoadContactsAsync()
         {
             IList<Contact> contacts = new List<Contact>();
             var hasPermission = await RequestPermissionAsync();
-            if (hasPermission)
+            if (!hasPermission)
             {
-                var uri = ContactsContract.Contacts.ContentUri;
-                var ctx = Application.Context;
-                await Task.Run(() =>
+                return contacts;
+            }
+
+            var uri = ContactsContract.Contacts.ContentUri;
+            var ctx = Application.Context;
+            await Task.Run(() =>
+            {
+                // 暂时只请求通讯录Id、DisplayName、PhotoThumbnailUri，可以扩展
+                var cursor = ctx.ApplicationContext.ContentResolver.Query(uri, new string[]
                 {
-                    var cursor = ctx.ApplicationContext.ContentResolver.Query(uri, new string[]
-                    {
                         ContactsContract.Contacts.InterfaceConsts.Id,
                         ContactsContract.Contacts.InterfaceConsts.DisplayName,
                         ContactsContract.Contacts.InterfaceConsts.PhotoThumbnailUri
-                    }, null, null, $"{ContactsContract.Contacts.InterfaceConsts.DisplayName} ASC");
-                    if (cursor.Count > 0)
+                }, null, null, $"{ContactsContract.Contacts.InterfaceConsts.DisplayName} ASC");
+                if (cursor.Count > 0)
+                {
+                    while (cursor.MoveToNext())
                     {
-                        while (cursor.MoveToNext())
+                        var contact = CreateContact(cursor, ctx);
+
+                        if (!string.IsNullOrWhiteSpace(contact.Name))
                         {
-                            var contact = CreateContact(cursor, ctx);
-
-                            if (!string.IsNullOrWhiteSpace(contact.Name))
-                            {
-                                OnContactLoaded?.Invoke(this, new ContactEventArgs(contact));
-                                contacts.Add(contact);
-                            }
-
-                            if (stopLoad)
-                                break;
+                            // 读取出一条，即通知界面展示
+                            OnContactLoaded?.Invoke(this, new ContactEventArgs(contact));
+                            contacts.Add(contact);
                         }
-                    }
-                });
 
-            }
+                        if (stopLoad)
+                            break;
+                    }
+                }
+            });
+
             return contacts;
 
         }
 
+        /// <summary>
+        /// 读取一条通讯录数据
+        /// </summary>
+        /// <param name="cursor"></param>
+        /// <param name="ctx"></param>
+        /// <returns></returns>
         Contact CreateContact(ICursor cursor, Context ctx)
         {
             var contactId = GetString(cursor, ContactsContract.Contacts.InterfaceConsts.Id);
@@ -213,7 +245,12 @@ namespace TerminalMACS.Clients.App.Droid.Services
             return contact;
         }
 
-
+        /// <summary>
+        /// 读取联系人电话号码
+        /// </summary>
+        /// <param name="ctx"></param>
+        /// <param name="contactId"></param>
+        /// <returns></returns>
         string[] GetNumbers(Context ctx, string contactId)
         {
             var key = ContactsContract.CommonDataKinds.Phone.Number;
@@ -229,6 +266,12 @@ namespace TerminalMACS.Clients.App.Droid.Services
             return ReadCursorItems(cursor, key)?.ToArray();
         }
 
+        /// <summary>
+        /// 读取联系人邮箱地址
+        /// </summary>
+        /// <param name="ctx"></param>
+        /// <param name="contactId"></param>
+        /// <returns></returns>
         string[] GetEmails(Context ctx, string contactId)
         {
             var key = ContactsContract.CommonDataKinds.Email.InterfaceConsts.Data;

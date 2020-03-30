@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
 using TerminalMACS.Clients.App.Models;
+using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.Views
 {

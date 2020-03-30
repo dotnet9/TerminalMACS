@@ -26,6 +26,8 @@ namespace TerminalMACS.Clients.App.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            // 将通讯录服务实例传递给共享库，由共享库使用读取通讯录接口
             LoadApplication(new App(contactsService));
 
             return base.FinishedLaunching(app, options);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TerminalMACS.Clients.App.Models
+﻿namespace TerminalMACS.Clients.App.Models
 {
     /// <summary>
     /// 通讯录

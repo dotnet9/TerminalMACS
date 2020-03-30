@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-using Xamarin.Forms;
-
-using TerminalMACS.Clients.App.Models;
-using TerminalMACS.Clients.App.Services;
-
 namespace TerminalMACS.Clients.App.ViewModels
 {
     /// <summary>
