@@ -12,7 +12,8 @@
         <StackLayout>
             <SearchBar x:Name="filterText"
                         HeightRequest="40"
-                        Text="{Binding SearchText}" />
+                        Text="{Binding SearchText}"
+                       SearchCommand="{Binding SearchCommand}"/>
             <ListView   ItemsSource="{Binding FilteredContacts}"
                         HasUnevenRows="True">
                 <ListView.ItemTemplate>

@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using TerminalMACS.Clients.App.Models;
 using TerminalMACS.Clients.App.Services;
+using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
@@ -21,10 +23,22 @@ namespace TerminalMACS.Clients.App.ViewModels
         /// 标题
         /// </summary>
         public new string Title => "通讯录";
+        private string _SearchText;
         /// <summary>
         /// 搜索关键字
         /// </summary>
-        public string SearchText { get; set; }
+        public string SearchText
+        {
+            get { return _SearchText; }
+            set
+            {
+                SetProperty(ref _SearchText, value);
+            }
+        }
+        /// <summary>
+        /// 通讯录搜索命令
+        /// </summary>
+        public ICommand SearchCommand { get; }
         /// <summary>
         /// 通讯录列表
         /// </summary>
@@ -38,7 +52,8 @@ namespace TerminalMACS.Clients.App.ViewModels
             {
                 return string.IsNullOrEmpty(SearchText) ? Contacts
                                                         : new ObservableCollection<Contact>(Contacts?.ToList()
-                                                        ?.Where(s => !string.IsNullOrEmpty(s.Name) && s.Name.ToLower().Contains(SearchText.ToLower())));
+                                                        ?.Where(s => (!string.IsNullOrWhiteSpace(s.Name) && s.Name.ToLower().Contains(SearchText.ToLower()))
+                                                        || (s.PhoneNumbers.Length > 0 && s.PhoneNumbers.ToList().Exists(cu => cu.ToString().Contains(SearchText)))));
             }
         }
         public ContactViewModel(IContactsService contactService)
@@ -48,6 +63,14 @@ namespace TerminalMACS.Clients.App.ViewModels
             Xamarin.Forms.BindingBase.EnableCollectionSynchronization(Contacts, null, ObservableCollectionCallback);
             _contactService.OnContactLoaded += OnContactLoaded;
             LoadContacts();
+
+
+            SearchCommand = new Command(async () =>
+            {
+                var contacts = FilteredContacts;
+                Console.WriteLine($"过滤后通讯录有：{contacts.Count}条");
+                await Task.FromResult(FilteredContacts);
+            });
         }
 
         /// <summary>
@@ -65,7 +88,7 @@ namespace TerminalMACS.Clients.App.ViewModels
                 accessMethod?.Invoke();
             }
         }
-        
+
         /// <summary>
         /// 收到事件通知，读取一条通讯录信息
         /// </summary>
