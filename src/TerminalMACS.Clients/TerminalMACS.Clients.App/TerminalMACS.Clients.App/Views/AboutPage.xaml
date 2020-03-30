@@ -38,40 +38,37 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="TerminalMACS" FontAttributes="Bold" FontSize="22" />
+                                <Span Text="{Binding SystemName}" FontAttributes="Bold" FontSize="22" />
                                 <Span Text=" " />
-                                <Span Text="1.0" ForegroundColor="{StaticResource LightTextColor}" />
+                                <Span Text="{Binding CurrentClientVersion}" ForegroundColor="{StaticResource LightTextColor}" />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label>
+                <Label Text="{Binding CurrentClientName}" FontAttributes="Bold"/>
+                <Label HorizontalOptions="EndAndExpand" Margin="0,0,100,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="远程终端检测与管理系统之" />
-                                <Span Text=" " />
-                                <Span Text="移动终端" FontAttributes="Bold" />
-                                <Span Text="." />
+                                <Span Text="-"/>
+                                <Span Text="{Binding SystemChineseName}"/>
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>
                 </Label>
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="沙漠尽头的狼 编写" />
-                                <Span Text=" " />
-                                <Span Text="https://dotnet9.com,https://terminalmacs.com" FontAttributes="Bold" />
-                                <Span Text=" " />
-                                <Span Text="欢迎提出宝贵意见." />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button Margin="0,10,0,0" Text="了解更多"
-                        Command="{Binding OpenWebCommand}"
+                <Label Text="欢迎提出宝贵意见" />
+                <Label Text="Dotnet9：https://dotnet9.com" FontAttributes="Bold" />
+                <Label Text="TerminalMACS：https://terminalmacs.com" FontAttributes="Bold"/>
+                <Button Margin="0,10,0,0" Text="Dotnet9"
+                        Command="{Binding OpenDotnet9WebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                <Button Margin="0,10,0,0" Text="{Binding SystemName}"
+                        Command="{Binding OpenTerminalMACSWebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                <Button Margin="0,10,0,0" Text="查看源码"
+                        Command="{Binding OpenCurrentClientSourceWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
             </StackLayout>

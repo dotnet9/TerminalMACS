@@ -14,15 +14,15 @@ namespace TerminalMACS.Clients.App.Models
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// 获取或者设置头像
+        /// 获取或者设置 头像
         /// </summary>
         public string Image { get; set; }
         /// <summary>
-        /// 获取或者设置邮箱地址
+        /// 获取或者设置 邮箱地址
         /// </summary>
         public string[] Emails { get; set; }
         /// <summary>
-        /// 获取或者设置手机号码
+        /// 获取或者设置 手机号码
         /// </summary>
         public string[] PhoneNumbers { get; set; }
     }

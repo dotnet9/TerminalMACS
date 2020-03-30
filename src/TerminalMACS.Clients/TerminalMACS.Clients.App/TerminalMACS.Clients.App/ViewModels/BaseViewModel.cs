@@ -11,7 +11,7 @@ using TerminalMACS.Clients.App.Services;
 namespace TerminalMACS.Clients.App.ViewModels
 {
     /// <summary>
-    /// ViewModel基类
+    /// ViewModel基类，封装INotifyPropertyChanged
     /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {

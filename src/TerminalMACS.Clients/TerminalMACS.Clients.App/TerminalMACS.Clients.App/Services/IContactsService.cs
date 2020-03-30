@@ -33,7 +33,7 @@ namespace TerminalMACS.Clients.App.Services
         /// </summary>
         bool IsLoading { get; }
         /// <summary>
-        /// 异常获取所有通讯录
+        /// 尝试获取所有通讯录
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>

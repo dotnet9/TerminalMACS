@@ -25,6 +25,11 @@ namespace TerminalMACS.Clients.App.Views
             MenuPages.Add((int)MenuItemType.About, (NavigationPage)Detail);
         }
 
+        /// <summary>
+        /// 异步跳转菜单
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))

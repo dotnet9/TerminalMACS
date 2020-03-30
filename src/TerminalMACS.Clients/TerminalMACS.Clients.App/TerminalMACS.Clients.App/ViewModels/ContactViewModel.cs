@@ -52,7 +52,13 @@ namespace TerminalMACS.Clients.App.ViewModels
             LoadContacts();
         }
 
-
+        /// <summary>
+        /// BindingBase.EnableCollectionSynchronization 为集合启用跨线程更新
+        /// </summary>
+        /// <param name="collection"></param>
+        /// <param name="context"></param>
+        /// <param name="accessMethod"></param>
+        /// <param name="writeAccess"></param>
         void ObservableCollectionCallback(IEnumerable collection, object context, Action accessMethod, bool writeAccess)
         {
             // `lock` ensures that only one thread access the collection at a time
