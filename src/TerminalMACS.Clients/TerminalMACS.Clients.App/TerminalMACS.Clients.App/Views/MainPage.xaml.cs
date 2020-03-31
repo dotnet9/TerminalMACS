@@ -33,6 +33,9 @@ namespace TerminalMACS.Clients.App.Views
             {
                 switch (id)
                 {
+                    case (int)MenuItemType.ClientInfo:
+                        MenuPages.Add(id, new NavigationPage(new ClientInfoPage()));
+                        break;
                     case (int)MenuItemType.Contacts:
                         MenuPages.Add(id, new NavigationPage(new ContactPage()));
                         break;

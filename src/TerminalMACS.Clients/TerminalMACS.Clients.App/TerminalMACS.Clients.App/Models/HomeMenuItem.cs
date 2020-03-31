@@ -5,8 +5,9 @@
     /// </summary>
     public enum MenuItemType
     {
-        Contacts,       //联系人
-        About           //关于
+        ClientInfo,       // 基本信息
+        Contacts,       // 联系人
+        About           // 关于
     }
     public class HomeMenuItem
     {
