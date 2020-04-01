@@ -1,14 +1,14 @@
 <p align="center">
   <a href="https://terminalmacs.com">
-    <img src="">
-  </>
+    <img src="https://terminalmacs.com/wp-content/uploads/2020/03/logo.png">
+  </a>
 </p>
 
 <h1 align="center">TerminalMACS</h1>
 
 <div align="center">
 
-Multi terminal resource management and check system, including Android, iOS, windows, Linux, MAC, etc
+Multi terminal resource management and check system, including Android, iOS, windows, Linux, MAC, etc.
 
 </div>
 

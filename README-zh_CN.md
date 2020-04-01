@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://terminalmacs.com">
-    <img src="">
-  </>
+    <img src="https://terminalmacs.com/wp-content/uploads/2020/03/logo.png">
+  </a>
 </p>
 
 <h1 align="center">TerminalMACS</h1>
