@@ -1,76 +1,76 @@
-# TerminalMACS-多终端管理与检测系统
+<p align="center">
+  <a href="https://terminalmacs.com">
+    <img src="">
+  </>
+</p>
 
-中文全称：多终端管理与检测系统
+<h1 align="center">TerminalMACS</h1>
 
-英文简称：TerminaMACS，全称：Terminal Management and Check System
+<div align="center">
 
-本文同步更新地址：
-- https://dotnet9.com/11429.html
-- https://terminalmacs.com/813.html
+Multi terminal resource management and check system, including Android, iOS, windows, Linux, MAC, etc
 
-本系统使用技术栈较多：C/S(WPF + Prism + log4net, Qt Quick + CTK + log4qt)、B/S(Vue + Element UI + .Net Web API)、移动端（Xamarin.Forms, Flutter、Android原生(Java、Kotlin)）。 
+</div>
 
-计划开发周期1年以上（2020-03-21开始）。
+English | [简体中文](./README-zh_CN.md)
 
-TerminalMACS思维导图
-![TerminalMACS思维导图](docs/imgs/first_workprogress.png)
+## ✨ Features
 
-## 一、本系统可监控多种终端资源：
+- The mobile terminal supports Android and iOS.
+- Mobile terminal uses multiple languages to develop multiple versions, cross platform version (C# + Xamarin.Forms, Dart + Flutter), native Android (Java, Kotlin).
+- PC terminal supports windows, Linux and MAC.
+- PC terminal is developed with. Net 5.
+- The mobile management terminal supports Android and iOS.
+- Mobile management uses multiple languages to develop multiple versions, cross platform version (C# + Xamarin.Forms, Dart + Flutter), native Android (Java, Kotlin).
+- The PC management terminal supports Windows, Linux and MAC.
+- PC management uses multiple languages to develop multiple versions, cross platform version (C++ + QT quick), Windows Version (C# + WPF).
+- Support cross platform management end of web version, develop multiple versions in multiple languages, C# + Blazer, Vue + Element UI.
 
-移动端
-- Android
-- iOS
+## 🌈 Online Examples
 
-PC端
-- Windows
-- Linux
-- Mac
+- [Xamarin.Forms Client release 1.0](https://terminalmacs.com/terminalmacs-clients-app-android)
 
-## 二、整个系统分为三类进程：
+## 🖥 Environment Support
 
-1. 客户端(Client)
+- .NET Core 3.1
 
-客户端用于获取终端数据，如手机的通讯录、通话记录等，windows终端的文件系统，linux终端的进程列表等，包括：
-- 移动客户端（Android、iOS）；
-- PC客户端(Windows、Linux、Mac)。
+## 💿 Current Version
 
-2. 服务端(Server)
+Client
+- Xamarin.Forms 1.0
 
-用于与客户端和管理端数据中转，包括获取客户端数据、向客户端发送命令、向管理端发送数据等。
+## 🎨 Design Specification
 
-3. 管理端(Manager)
+Empty
 
-用于管理客户端，展示客户端数据、命令交互等，包括：
-- 移动管理端（Android、iOS）；
-- PC管理端(Windows、Linux、Mac)；
-- B/S管理端。
+## 📦 Installation Guide
 
-## 三、各子模块技术栈
+- Install [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) 3.1.201 or later
 
-1. 客户端(Client)
-- 移动客户端（Android、iOS）：跨平台版本1（C# + Xamarin.Forms）、跨平台版本2（Dart + Flutter）、Android原生(Java、Kotlin)。
-- PC客户端(Windows、Linux、Mac)：C# 控制台。
+## 🔨 Local Development
 
-2. 服务端
+Empty
 
-.NET 5 WEB API + Entity Framework Core(MySql）+ Redis + RabbitMQ。
+## 🔗 Links
 
-3. 管理端
-- 移动管理端（Android、iOS）：跨平台版本1（C# + Xamarin.Forms）、跨平台版本2（Dart + Flutter）、Android原生(Java、Kotlin)。
-- PC管理端(Windows)：C# + WPF。
-- PC管理端(Windows、Linux、Mac)：C++ + Qt Quick。
+- [Official website](https://terminalmacs.com)
+- [Cooperation website](https://dotnet9.com)
 
-## 四、开发进度
-2020-03-21
-项目才计划不久，先开发移动客户端基本功能：
-1. 获取通讯录数据
-参考文章：[Getting phone contacts in Xamarin Forms](https://www.xamboy.com/2019/10/10/getting-phone-contacts-in-xamarin-forms/)
+## 🗺 Roadmap
 
-参考上面的文章，Android获取通讯录功能已经完成大部分（获取所有通讯录信息并展示），iOS由于没有相关环境，iOS代码是已经添加了，只是未测试，有条件的同学可以帮忙测试下。
+- 1. The first step is to develop three processes, Xamarin.Forms Client,. Net 5 Web API Server (using ABP vNext Community Edition), WPF management end (Prism as MVVM, modular framework).
 
-下面是部分截图，稍作整理，出篇文章介绍获取通讯录功能代码，大部分是参考上面的文章。
-<img src="docs/imgs/About_MobileClient.jpg" width="400" alt="关于移动客户端">
+## 🤝 Contributing
 
-<img src="docs/imgs/Contact_MobileClient.jpg" width="400" alt="通讯录-移动客户端">
+Shortly after the start of the project, you can leave a message at:
+- [GitHub](https://github.com/dotnet9/terminalmacs)
+- [Official website](https://terminalmacs.com)
+- [Cooperation website](https://dotnet9.com).
 
-本项目源码已经开源：https://github.com/dotnet9/TerminalMACS
+## ❓ Community Support
+
+See 🤝 Contributing
+
+## ☀️ License
+
+MIT
