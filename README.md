@@ -69,8 +69,8 @@ PC端
 参考上面的文章，Android获取通讯录功能已经完成大部分（获取所有通讯录信息并展示），iOS由于没有相关环境，iOS代码是已经添加了，只是未测试，有条件的同学可以帮忙测试下。
 
 下面是部分截图，稍作整理，出篇文章介绍获取通讯录功能代码，大部分是参考上面的文章。
-![关于移动客户端](docs/imgs/About_MobileClient.jpg)
+<img src="docs/imgs/About_MobileClient.jpg" width="400" alt="关于移动客户端">
 
-![通讯录-移动客户端](docs/imgs/Contact_MobileClient.jpg)
+<img src="docs/imgs/Contact_MobileClient.jpg" width="400" alt="通讯录-移动客户端">
 
 本项目源码已经开源：https://github.com/dotnet9/TerminalMACS
