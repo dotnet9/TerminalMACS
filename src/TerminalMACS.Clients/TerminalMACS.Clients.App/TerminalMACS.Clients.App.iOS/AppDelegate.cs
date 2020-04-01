@@ -27,7 +27,7 @@ namespace TerminalMACS.Clients.App.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
-            // 将通讯录服务实例传递给共享库，由共享库使用读取通讯录接口
+            // Send the contact service instance to the shared library, which uses the read contact interface
             LoadApplication(new App(contactsService));
 
             return base.FinishedLaunching(app, options);

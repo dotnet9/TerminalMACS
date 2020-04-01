@@ -25,7 +25,7 @@ namespace TerminalMACS.Clients.App.Views
 
             ListViewMenu.ItemsSource = menuItems;
 
-            ListViewMenu.SelectedItem = menuItems[menuItems.Count - 1];     //显示关于界面
+            ListViewMenu.SelectedItem = menuItems[menuItems.Count - 1];     //Default display about page
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)

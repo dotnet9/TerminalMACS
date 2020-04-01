@@ -10,7 +10,7 @@ namespace TerminalMACS.Clients.App
         public IContactsService ContactsService { get; private set; }
 
         /// <summary>
-        /// 通讯录服务实例，由终端app传递到本共享库
+        /// Contact service instance, transferred from terminal app to this shared library
         /// </summary>
         /// <param name="contactsService"></param>
         public App(IContactsService contactsService)

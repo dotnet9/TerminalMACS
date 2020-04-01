@@ -7,7 +7,7 @@ using TerminalMACS.Clients.App.Models;
 namespace TerminalMACS.Clients.App.Services
 {
     /// <summary>
-    /// 通讯录事件参数
+    /// Read a contact record notification event parameter.
     /// </summary>
     public class ContactEventArgs:EventArgs
     {
@@ -19,20 +19,21 @@ namespace TerminalMACS.Clients.App.Services
     }
 
     /// <summary>
-    /// 通讯录服务接口，android和iOS终端具体的通讯录获取服务需要继承此接口
+    /// Contact service interface, which is required for Android and iOS terminal specific 
+    ///  contact acquisition service needs to implement this interface.
     /// </summary>
     public interface IContactsService
     {
         /// <summary>
-        /// 读取一条数据通知
+        /// Read a contact record and notify the shared library through this event.
         /// </summary>
         event EventHandler<ContactEventArgs> OnContactLoaded;
         /// <summary>
-        /// 是否正在加载
+        /// Loading or not
         /// </summary>
         bool IsLoading { get; }
         /// <summary>
-        /// 尝试获取所有通讯录
+        /// Try to get all contact information
         /// </summary>
         /// <param name="token"></param>
         /// <returns></returns>

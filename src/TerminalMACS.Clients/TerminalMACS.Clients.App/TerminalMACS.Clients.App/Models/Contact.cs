@@ -1,24 +1,24 @@
 ﻿namespace TerminalMACS.Clients.App.Models
 {
     /// <summary>
-    /// 通讯录
+    /// Contact information entity.
     /// </summary>
     public class Contact
     {
         /// <summary>
-        /// 获取或者设置名称
+        /// Gets or sets the name
         /// </summary>
         public string Name { get; set; }
         /// <summary>
-        /// 获取或者设置 头像
+        /// Gets or sets the image
         /// </summary>
         public string Image { get; set; }
         /// <summary>
-        /// 获取或者设置 邮箱地址
+        /// Gets or sets the emails
         /// </summary>
         public string[] Emails { get; set; }
         /// <summary>
-        /// 获取或者设置 手机号码
+        /// Gets or sets the phone numbers
         /// </summary>
         public string[] PhoneNumbers { get; set; }
     }

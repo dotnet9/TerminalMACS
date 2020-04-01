@@ -23,14 +23,14 @@ namespace TerminalMACS.Clients.App.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             UserDialogs.Init(() => this);
 
-            // 将通讯录服务实例传递给共享库，由共享库使用读取通讯录接口
+            // Send the contact service instance to the shared library, which uses the read contact interface
             LoadApplication(new App(contactsService));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
-            // 通讯录服务处理权限请求结果
+            // The contact service processes the result of the permission request.
             ContactsService.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);

@@ -7,7 +7,7 @@ using Xamarin.Forms;
 namespace TerminalMACS.Clients.App.Views
 {
     /// <summary>
-    /// 主页
+    /// Main page
     /// </summary>
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
@@ -23,7 +23,7 @@ namespace TerminalMACS.Clients.App.Views
         }
 
         /// <summary>
-        /// 异步跳转菜单
+        /// Asynchronous switch menu
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

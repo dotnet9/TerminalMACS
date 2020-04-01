@@ -5,24 +5,24 @@ using Xamarin.Forms;
 namespace TerminalMACS.Clients.App.ViewModels
 {
     /// <summary>
-    /// 关于页面ViewModel
+    /// About page view ViewModel
     /// </summary>
     public class AboutViewModel : BaseViewModel
     {
         /// <summary>
-        /// 获取或者设置 系统简称名称
+        /// Gets or sets System abbreviation.
         /// </summary>
         public string SystemName { get; set; } = "TerminalMACS";
         /// <summary>
-        /// 获取或者设置 系统中文名称
+        /// Gets or sets chinese name.
         /// </summary>
         public string SystemChineseName { get; set; } = "多终端管理与检测系统";
         /// <summary>
-        /// 获取或者设置 当前客户端名称
+        /// Gets or sets current client name.
         /// </summary>
         public string CurrentClientName { get; set; } = "移动客户端Xamarin.Forms版";
         /// <summary>
-        /// 获取或者设置 当前Xamarin.Forms客户端版本
+        /// 获取或者设置 current client version.
         /// </summary>
         public string CurrentClientVersion { get; set; } = "1.0";
         public AboutViewModel()

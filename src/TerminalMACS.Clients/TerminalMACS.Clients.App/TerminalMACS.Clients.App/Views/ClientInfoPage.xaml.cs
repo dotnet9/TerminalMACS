@@ -9,6 +9,9 @@ using Xamarin.Forms.Xaml;
 
 namespace TerminalMACS.Clients.App.Views
 {
+    /// <summary>
+    /// Basic information page of client
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ClientInfoPage : ContentPage
     {

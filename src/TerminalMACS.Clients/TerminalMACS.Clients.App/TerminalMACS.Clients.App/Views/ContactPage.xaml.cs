@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace TerminalMACS.Clients.App.Views
 {
     /// <summary>
-    /// 通讯录页面
+    /// Contact list page
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [DesignTimeVisible(false)]

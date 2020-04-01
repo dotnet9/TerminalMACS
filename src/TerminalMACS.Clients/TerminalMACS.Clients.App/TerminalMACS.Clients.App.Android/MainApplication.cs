@@ -14,7 +14,7 @@ using Plugin.CurrentActivity;
 namespace TerminalMACS.Clients.App.Droid
 {
     /// <summary>
-    /// 该类是关键，必须添加，否则不能正常获取权限
+    /// This class is critical and must be added. Otherwise, permissions cannot be obtained normally
     /// </summary>
 #if DEBUG
     [Application(Debuggable = true)]

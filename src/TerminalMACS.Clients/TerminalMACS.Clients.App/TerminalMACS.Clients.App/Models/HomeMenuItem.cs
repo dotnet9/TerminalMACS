@@ -1,23 +1,26 @@
 ﻿namespace TerminalMACS.Clients.App.Models
 {
     /// <summary>
-    /// 主界面左上角的抽屉式菜单
+    /// Drawer menu in the upper left corner of the main page
     /// </summary>
     public enum MenuItemType
     {
-        ClientInfo,       // 基本信息
-        Contacts,       // 联系人
-        About           // 关于
+        ClientInfo,       // Basic information of mobile phone
+        Contacts,         // Contact information
+        About             // About
     }
+    /// <summary>
+    /// Drawer menu item
+    /// </summary>
     public class HomeMenuItem
     {
         /// <summary>
-        /// 获取或者设置 菜单ID
+        /// Gets or sets the id
         /// </summary>
         public MenuItemType Id { get; set; }
 
         /// <summary>
-        /// 获取或者设置 菜单名称
+        /// Gets or sets the title
         /// </summary>
 
         public string Title { get; set; }

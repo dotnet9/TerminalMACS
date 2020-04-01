@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 namespace TerminalMACS.Clients.App.ViewModels
 {
     /// <summary>
-    /// ViewModel基类，封装INotifyPropertyChanged
+    /// ViewModel base class, encapsulating interface INotifyPropertyChanged
     /// </summary>
     public class BaseViewModel : INotifyPropertyChanged
     {

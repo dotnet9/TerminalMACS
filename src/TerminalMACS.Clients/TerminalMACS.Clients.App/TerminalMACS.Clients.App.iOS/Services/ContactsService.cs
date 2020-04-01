@@ -12,7 +12,7 @@ using TerminalMACS.Clients.App.Services;
 namespace TerminalMACS.Clients.App.iOS.Services
 {
     /// <summary>
-    /// 通讯录获取服务
+    /// Contact service.
     /// </summary>
     public class ContactsService : NSObject, IContactsService
     {
@@ -26,7 +26,7 @@ namespace TerminalMACS.Clients.App.iOS.Services
         public bool IsLoading => _isLoading;
 
         /// <summary>
-        /// 异步请求权限
+        /// Asynchronous request permission
         /// </summary>
         /// <returns></returns>
         public async Task<bool> RequestPermissionAsync()
@@ -47,7 +47,7 @@ namespace TerminalMACS.Clients.App.iOS.Services
         }
 
         /// <summary>
-        /// 异步请求通讯录，此方法由界面真正调用
+        /// Request contact asynchronously. This method is called by the interface.
         /// </summary>
         /// <param name="cancelToken"></param>
         /// <returns></returns>
@@ -58,13 +58,13 @@ namespace TerminalMACS.Clients.App.iOS.Services
             if (!cancelToken.HasValue)
                 cancelToken = CancellationToken.None;
 
-            // 我们创建了一个十进制的TaskCompletionSource
+            // We create a TaskCompletionSource of decimal
             var taskCompletionSource = new TaskCompletionSource<IList<Contact>>();
 
-            // 在cancellationToken中注册lambda
+            // Registering a lambda into the cancellationToken
             cancelToken.Value.Register(() =>
             {
-                // 我们收到一条取消消息，取消TaskCompletionSource.Task
+                // We received a cancellation message, cancel the TaskCompletionSource.Task
                 requestStop = true;
                 taskCompletionSource.TrySetCanceled();
             });
@@ -73,7 +73,7 @@ namespace TerminalMACS.Clients.App.iOS.Services
 
             var task = LoadContactsAsync();
 
-            // 等待两个任务中的第一个任务完成
+            // Wait for the first task to finish among the two
             var completedTask = await Task.WhenAny(task, taskCompletionSource.Task);
             _isLoading = false;
 
@@ -82,7 +82,7 @@ namespace TerminalMACS.Clients.App.iOS.Services
         }
 
         /// <summary>
-        /// 异步加载通讯录，具体的通讯录读取方法
+        /// Load contacts asynchronously, fact reading method of address book.
         /// </summary>
         /// <returns></returns>
         async Task<IList<Contact>> LoadContactsAsync()

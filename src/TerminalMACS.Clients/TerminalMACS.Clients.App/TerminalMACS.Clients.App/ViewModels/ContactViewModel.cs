@@ -12,21 +12,21 @@ using Xamarin.Forms;
 namespace TerminalMACS.Clients.App.ViewModels
 {
     /// <summary>
-    /// 通讯录ViewModel
+    /// Contact page ViewModel
     /// </summary>
     public class ContactViewModel : BaseViewModel
     {
         /// <summary>
-        /// 通讯录服务接口
+        /// Contact service interface
         /// </summary>
         IContactsService _contactService;
         /// <summary>
-        /// 标题
+        /// Contact page view title
         /// </summary>
         public new string Title => "通讯录";
         private string _SearchText;
         /// <summary>
-        /// 搜索关键字
+        /// Gets or sets the search text of the contact list.
         /// </summary>
         public string SearchText
         {
@@ -37,16 +37,16 @@ namespace TerminalMACS.Clients.App.ViewModels
             }
         }
         /// <summary>
-        /// 通讯录搜索命令
+        /// The search contact command.
         /// </summary>
         public ICommand RaiseSearchCommand { get; }
         /// <summary>
-        /// 通讯录列表
+        /// The contact list.
         /// </summary>
         public ObservableCollection<Contact> Contacts { get; set; }
         private List<Contact> _FilteredContacts;
         /// <summary>
-        /// 通讯录过滤列表
+        /// Contact filter list.
         /// </summary>
         public List<Contact> FilteredContacts
 
@@ -68,7 +68,7 @@ namespace TerminalMACS.Clients.App.ViewModels
         }
 
         /// <summary>
-        /// 过滤通讯录
+        /// Filter contact list
         /// </summary>
         void RaiseSearchHandle()
         {
@@ -94,7 +94,8 @@ namespace TerminalMACS.Clients.App.ViewModels
         }
 
         /// <summary>
-        /// BindingBase.EnableCollectionSynchronization 为集合启用跨线程更新
+        /// BindingBase.EnableCollectionSynchronization
+        ///     Enable cross thread updates for collections
         /// </summary>
         /// <param name="collection"></param>
         /// <param name="context"></param>
@@ -110,7 +111,7 @@ namespace TerminalMACS.Clients.App.ViewModels
         }
 
         /// <summary>
-        /// 收到事件通知，读取一条通讯录信息
+        /// Received a event notification that a contact information was successfully read.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -121,7 +122,7 @@ namespace TerminalMACS.Clients.App.ViewModels
         }
 
         /// <summary>
-        /// 异步读取终端通讯录
+        /// Read contact information asynchronously
         /// </summary>
         /// <returns></returns>
         async Task LoadContacts()
@@ -132,7 +133,7 @@ namespace TerminalMACS.Clients.App.ViewModels
             }
             catch (TaskCanceledException)
             {
-                Console.WriteLine("任务已经取消");
+                Console.WriteLine("Task was cancelled");
             }
         }
     }
