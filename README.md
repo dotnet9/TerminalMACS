@@ -63,7 +63,7 @@ Empty
 ## 🤝 Contributing
 
 Shortly after the start of the project, you can leave a message at:
-- [GitHub](https://github.com/dotnet9/terminalmacs)
+- [GitHub](https://github.com/dotnet9/TerminalMACS/issues)
 - [Official website](https://terminalmacs.com)
 - [Cooperation website](https://dotnet9.com).
 

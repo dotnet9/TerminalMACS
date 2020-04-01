@@ -62,7 +62,7 @@
 
 ## 🤝 如何贡献
 
-项目刚启动不久，可在 [Github](https://github.com/dotnet9/TerminalMACS)、[官方网站](https://terminalmacs.com)、[合作网站](https://dotnet9.com) 留言。
+项目刚启动不久，可在 [Github](https://github.com/dotnet9/TerminalMACS/issues)、[官方网站](https://terminalmacs.com)、[合作网站](https://dotnet9.com) 留言。
 
 ## ❓ 社区互助
 
