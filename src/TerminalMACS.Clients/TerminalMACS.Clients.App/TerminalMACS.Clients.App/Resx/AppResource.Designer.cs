@@ -196,6 +196,15 @@ namespace TerminalMACS.Clients.App.Resx {
         }
         
         /// <summary>
+        ///   查找类似 Basic information of client 的本地化字符串。
+        /// </summary>
+        public static string Title_ClientInfoPage {
+            get {
+                return ResourceManager.GetString("Title_ClientInfoPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Contacts 的本地化字符串。
         /// </summary>
         public static string Title_ContactPage {

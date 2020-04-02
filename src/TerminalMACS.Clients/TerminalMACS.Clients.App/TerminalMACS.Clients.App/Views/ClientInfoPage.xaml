@@ -6,7 +6,8 @@
              mc:Ignorable="d"
              x:Class="TerminalMACS.Clients.App.Views.ClientInfoPage"
              xmlns:vm="clr-namespace:TerminalMACS.Clients.App.ViewModels"
-             xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx">
+             xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx"
+             Title="{x:Static resources:AppResource.Title_ClientInfoPage}">
     <ContentPage.BindingContext>
         <vm:ClientInfoViewModel/>
     </ContentPage.BindingContext>

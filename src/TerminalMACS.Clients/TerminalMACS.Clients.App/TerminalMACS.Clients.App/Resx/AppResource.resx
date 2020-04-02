@@ -170,6 +170,9 @@
   <data name="Title_AboutPage" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="Title_ClientInfoPage" xml:space="preserve">
+    <value>Basic information of client</value>
+  </data>
   <data name="Title_ContactPage" xml:space="preserve">
     <value>Contacts</value>
   </data>

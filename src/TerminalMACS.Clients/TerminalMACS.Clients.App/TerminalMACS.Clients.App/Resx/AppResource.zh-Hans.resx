@@ -169,6 +169,9 @@
   <data name="Title_AboutPage" xml:space="preserve">
     <value>关于</value>
   </data>
+  <data name="Title_ClientInfoPage" xml:space="preserve">
+    <value>客户端基本信息</value>
+  </data>
   <data name="Title_ContactPage" xml:space="preserve">
     <value>联系人</value>
   </data>
