@@ -4,7 +4,6 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using TerminalMACS.Clients.App.Droid.Services;
-using TerminalMACS.Clients.App.Services;
 
 namespace TerminalMACS.Clients.App.Droid
 {

@@ -3,4 +3,4 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 // Default Chinese environment
-[assembly: NeutralResourcesLanguage("zh-Hans")]
+//[assembly: NeutralResourcesLanguage("zh-Hans")]

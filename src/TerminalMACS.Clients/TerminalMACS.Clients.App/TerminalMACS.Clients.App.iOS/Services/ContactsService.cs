@@ -142,7 +142,5 @@ namespace TerminalMACS.Clients.App.iOS.Services
 
             return contacts;
         }
-
-
     }
 }

@@ -1,10 +1,6 @@
 ﻿using Plugin.DeviceInfo;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using TerminalMACS.Clients.App.Services;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
