@@ -120,6 +120,10 @@
   <data name="About_MenuItem" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="AppId" xml:space="preserve">
+    <value>App Id</value>
+    <comment>the id of the application.</comment>
+  </data>
   <data name="ClientInfo_MenuItem" xml:space="preserve">
     <value>Base Info</value>
   </data>

@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Plugin.DeviceInfo;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using TerminalMACS.Clients.App.Services;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.ViewModels
 {
@@ -10,6 +13,10 @@ namespace TerminalMACS.Clients.App.ViewModels
     /// </summary>
     public class ClientInfoViewModel : BaseViewModel
     {
+        /// <summary>
+        /// Gets or sets the id of the application.
+        /// </summary>
+        public string AppId { get; set; } = CrossDeviceInfo.Current.GenerateAppId();
         /// <summary>
         /// Gets or sets the model of the device.
         /// </summary>

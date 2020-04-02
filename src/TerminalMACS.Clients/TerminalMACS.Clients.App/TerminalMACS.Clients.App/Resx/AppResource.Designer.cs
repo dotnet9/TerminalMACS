@@ -70,6 +70,15 @@ namespace TerminalMACS.Clients.App.Resx {
         }
         
         /// <summary>
+        ///   查找类似 App Id 的本地化字符串。
+        /// </summary>
+        public static string AppId {
+            get {
+                return ResourceManager.GetString("AppId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Base Info 的本地化字符串。
         /// </summary>
         public static string ClientInfo_MenuItem {

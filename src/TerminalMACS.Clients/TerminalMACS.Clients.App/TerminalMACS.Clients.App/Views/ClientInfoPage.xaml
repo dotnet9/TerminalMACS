@@ -13,6 +13,9 @@
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="{x:Static resources:AppResource.AppId}"/>
+            <Label Text="{Binding AppId}" FontAttributes="Bold" Margin="10,0,0,10"/>
+            
             <Label Text="{x:Static resources:AppResource.DeviceModel}"/>
             <Label Text="{Binding Model}" FontAttributes="Bold" Margin="10,0,0,10"/>
 

@@ -61,7 +61,7 @@ namespace TerminalMACS.Clients.App.Droid.Services
                 // Provide an additional rationale to the user if the permission was not granted
                 // and the user would benefit from additional context for the use of the permission.
                 // For example, if the request has been denied previously.
-                await UserDialogs.Instance.AlertAsync("通讯录权限", "此操作需要“通讯录”权限", "确定");
+                await UserDialogs.Instance.AlertAsync("Contacts Permission", "This action requires contacts permission", "Ok");
             }
             else
             {

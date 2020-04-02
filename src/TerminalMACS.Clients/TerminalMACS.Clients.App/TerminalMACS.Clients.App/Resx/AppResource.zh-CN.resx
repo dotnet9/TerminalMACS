@@ -120,6 +120,10 @@
   <data name="About_MenuItem" xml:space="preserve">
     <value>关于</value>
   </data>
+  <data name="AppId" xml:space="preserve">
+    <value>应用ID</value>
+    <comment>the id of the application.</comment>
+  </data>
   <data name="ClientInfo_MenuItem" xml:space="preserve">
     <value>基本信息</value>
   </data>
