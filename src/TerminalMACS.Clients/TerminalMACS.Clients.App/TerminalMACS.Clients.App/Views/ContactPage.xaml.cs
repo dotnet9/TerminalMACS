@@ -14,7 +14,6 @@ namespace TerminalMACS.Clients.App.Views
     {
         public ContactPage()
         {
-            BindingContext = new ContactViewModel(App.Instance.ContactsService);
             InitializeComponent();
         }
     }

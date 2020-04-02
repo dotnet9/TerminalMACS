@@ -4,11 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:vm="clr-namespace:TerminalMACS.Clients.App.ViewModels"
              xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx"
              mc:Ignorable="d"
              Title="{x:Static resources:AppResource.Title_ContactPage}"
              x:Class="TerminalMACS.Clients.App.Views.ContactPage"
              ios:Page.UseSafeArea="true">
+    <ContentPage.BindingContext>
+        <vm:ContactViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
             <SearchBar x:Name="filterText"

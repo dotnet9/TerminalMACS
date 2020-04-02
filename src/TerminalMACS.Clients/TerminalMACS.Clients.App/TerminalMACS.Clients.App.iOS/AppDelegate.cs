@@ -15,7 +15,6 @@ namespace TerminalMACS.Clients.App.iOS
     [Register("AppDelegate")]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
-        IContactsService contactsService = new ContactsService();
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
         // method you should instantiate the window, load the UI into it and then make the window
@@ -28,7 +27,7 @@ namespace TerminalMACS.Clients.App.iOS
             global::Xamarin.Forms.Forms.Init();
 
             // Send the contact service instance to the shared library, which uses the read contact interface
-            LoadApplication(new App(contactsService));
+            LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
         }

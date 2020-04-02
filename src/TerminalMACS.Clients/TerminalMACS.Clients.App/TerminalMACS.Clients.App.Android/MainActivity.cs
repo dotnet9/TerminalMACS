@@ -11,7 +11,6 @@ namespace TerminalMACS.Clients.App.Droid
     [Activity(Label = "TerminalMACS.Clients.App", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        IContactsService contactsService = new ContactsService();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -23,8 +22,7 @@ namespace TerminalMACS.Clients.App.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             UserDialogs.Init(() => this);
 
-            // Send the contact service instance to the shared library, which uses the read contact interface
-            LoadApplication(new App(contactsService));
+            LoadApplication(new App());
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

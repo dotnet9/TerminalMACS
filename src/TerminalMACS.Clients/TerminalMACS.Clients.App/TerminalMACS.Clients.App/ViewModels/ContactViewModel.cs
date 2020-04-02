@@ -54,9 +54,9 @@ namespace TerminalMACS.Clients.App.ViewModels
                 SetProperty(ref _FilteredContacts, value);
             }
         }
-        public ContactViewModel(IContactsService contactService)
+        public ContactViewModel()
         {
-            _contactService = contactService;
+            _contactService = DependencyService.Get<IContactsService>();
             Contacts = new ObservableCollection<Contact>();
             Xamarin.Forms.BindingBase.EnableCollectionSynchronization(Contacts, null, ObservableCollectionCallback);
             _contactService.OnContactLoaded += OnContactLoaded;

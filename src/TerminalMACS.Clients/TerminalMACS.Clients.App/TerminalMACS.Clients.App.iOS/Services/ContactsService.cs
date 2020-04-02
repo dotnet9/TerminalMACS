@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using TerminalMACS.Clients.App.Models;
 using TerminalMACS.Clients.App.Services;
 
+[assembly: Xamarin.Forms.Dependency(typeof(TerminalMACS.Clients.App.iOS.Services.ContactsService))]
 namespace TerminalMACS.Clients.App.iOS.Services
 {
     /// <summary>

@@ -6,17 +6,8 @@ namespace TerminalMACS.Clients.App
 {
     public partial class App : Application
     {
-        public static App Instance { get; private set; }
-        public IContactsService ContactsService { get; private set; }
-
-        /// <summary>
-        /// Contact service instance, transferred from terminal app to this shared library
-        /// </summary>
-        /// <param name="contactsService"></param>
-        public App(IContactsService contactsService)
+        public App()
         {
-            Instance = this;
-            ContactsService = contactsService;
             InitializeComponent();
 
             MainPage = new MainPage();
