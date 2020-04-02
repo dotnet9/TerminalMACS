@@ -20,6 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Resx\AppResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resx\AppResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resx\AppResource.zh-Hans.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ClientInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

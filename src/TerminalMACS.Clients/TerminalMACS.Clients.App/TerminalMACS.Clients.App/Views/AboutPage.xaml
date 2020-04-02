@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx"
              xmlns:vm="clr-namespace:TerminalMACS.Clients.App.ViewModels"
              mc:Ignorable="d"
              x:Class="TerminalMACS.Clients.App.Views.AboutPage"
-             Title="{Binding Title}">
+             Title="{x:Static resources:AppResource.Title_AboutPage}">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -28,44 +29,24 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                    <Image Source="logo.png" VerticalOptions="Center" HeightRequest="64" />
                 </ContentView>
             </StackLayout>
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="16,40,16,40" Spacing="10">
-                <Label FontSize="22">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="{Binding SystemName}" FontAttributes="Bold" FontSize="22" />
-                                <Span Text=" " />
-                                <Span Text="{Binding CurrentClientVersion}" ForegroundColor="{StaticResource LightTextColor}" />
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label Text="{Binding CurrentClientName}" FontAttributes="Bold"/>
-                <Label HorizontalOptions="EndAndExpand" Margin="0,0,100,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="-"/>
-                                <Span Text="{Binding SystemChineseName}"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Label Text="欢迎提出宝贵意见" />
-                <Button Margin="0,10,0,0" Text="Dotnet9"
-                        Command="{Binding RaiseOpenDotnet9WebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
-                <Button Margin="0,10,0,0" Text="{Binding SystemName}"
+                <Label Text="{x:Static resources:AppResource.ClientName_AboutPage}" FontAttributes="Bold"/>
+                <Label Text="- TerminaMACS" FontAttributes="Bold" HorizontalOptions="End" Margin="0,0,50,50"/>
+                <Label Text="{x:Static resources:AppResource.WelcomeComments_AboutPage}"/>
+                <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.OfficialWebsite_AboutPage}"
                         Command="{Binding RaiseOpenTerminalMACSWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
-                <Button Margin="0,10,0,0" Text="查看源码"
+                <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.CooperationWebsite_AboutPage}"
+                        Command="{Binding RaiseOpenDotnet9WebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
+                <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.ViewSourceCode_AboutPage}"
                         Command="{Binding RaiseOpenCurrentClientSourceWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />

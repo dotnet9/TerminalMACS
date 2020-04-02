@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx"
              mc:Ignorable="d"
-             Title="{Binding Title}"
+             Title="{x:Static resources:AppResource.Title_ContactPage}"
              x:Class="TerminalMACS.Clients.App.Views.ContactPage"
              ios:Page.UseSafeArea="true">
     <ContentPage.Content>

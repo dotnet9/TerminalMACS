@@ -5,82 +5,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="TerminalMACS.Clients.App.Views.ClientInfoPage"
-             xmlns:vm="clr-namespace:TerminalMACS.Clients.App.ViewModels">
+             xmlns:vm="clr-namespace:TerminalMACS.Clients.App.ViewModels"
+             xmlns:resources="clr-namespace:TerminalMACS.Clients.App.Resx">
     <ContentPage.BindingContext>
         <vm:ClientInfoViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
         <StackLayout>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备型号: "/>
-                            <Span Text="{Binding Model}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备厂商: "/>
-                            <Span Text="{Binding Manufacturer}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备名称: "/>
-                            <Span Text="{Binding Name}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备版本: "/>
-                            <Span Text="{Binding VersionString}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备平台: "/>
-                            <Span Text="{Binding Platform}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="Idiom: "/>
-                            <Span Text="{Binding Idiom}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
-            <Label>
-                <Label.FormattedText>
-                    <FormattedString>
-                        <FormattedString.Spans>
-                            <Span Text="设备类型: "/>
-                            <Span Text="{Binding DeviceType}" FontAttributes="Bold"/>
-                        </FormattedString.Spans>
-                    </FormattedString>
-                </Label.FormattedText>
-            </Label>
+            <Label Text="{x:Static resources:AppResource.DeviceModel}"/>
+            <Label Text="{Binding Model}" FontAttributes="Bold" Margin="10,0,0,10"/>
+
+            <Label Text="{x:Static resources:AppResource.DeviceManufacturer}"/>
+            <Label Text="{Binding Manufacturer}" FontAttributes="Bold" Margin="10,0,0,10"/>
+            
+            <Label Text="{x:Static resources:AppResource.DeviceName}"/>
+            <Label Text="{Binding Name}" FontAttributes="Bold" Margin="10,0,0,10"/>
+            
+            <Label Text="{x:Static resources:AppResource.DeviceVersionString}"/>
+            <Label Text="{Binding VersionString}" FontAttributes="Bold" Margin="10,0,0,10"/>
+
+            <Label Text="{x:Static resources:AppResource.DevicePlatform}"/>
+            <Label Text="{Binding Platform}" FontAttributes="Bold" Margin="10,0,0,10"/>
+            
+            <Label Text="{x:Static resources:AppResource.DeviceIdiom}"/>
+            <Label Text="{Binding Idiom}" FontAttributes="Bold" Margin="10,0,0,10"/>
+            
+            <Label Text="{x:Static resources:AppResource.DeviceType}"/>
+            <Label Text="{Binding DeviceType}" FontAttributes="Bold" Margin="10,0,0,10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

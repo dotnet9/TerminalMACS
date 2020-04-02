@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using TerminalMACS.Clients.App.Models;
+using TerminalMACS.Clients.App.Resx;
 using Xamarin.Forms;
 
 namespace TerminalMACS.Clients.App.Views
@@ -18,9 +19,9 @@ namespace TerminalMACS.Clients.App.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem{ Id = MenuItemType.ClientInfo, Title="基本信息" },
-                new HomeMenuItem{ Id = MenuItemType.Contacts, Title="通讯录" },
-                new HomeMenuItem { Id = MenuItemType.About, Title="关于" }
+                new HomeMenuItem{ Id = MenuItemType.ClientInfo, Title=AppResource.ClientInfo_MenuItem },
+                new HomeMenuItem{ Id = MenuItemType.Contacts, Title=AppResource.Contacts_MenuItem},
+                new HomeMenuItem { Id = MenuItemType.About, Title=AppResource.About_MenuItem }
             };
 
             ListViewMenu.ItemsSource = menuItems;

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using TerminalMACS.Clients.App.Models;
+using TerminalMACS.Clients.App.Resx;
 using TerminalMACS.Clients.App.Services;
 using Xamarin.Forms;
 
@@ -20,10 +21,6 @@ namespace TerminalMACS.Clients.App.ViewModels
         /// Contact service interface
         /// </summary>
         IContactsService _contactService;
-        /// <summary>
-        /// Contact page view title
-        /// </summary>
-        public new string Title => "通讯录";
         private string _SearchText;
         /// <summary>
         /// Gets or sets the search text of the contact list.
@@ -133,7 +130,7 @@ namespace TerminalMACS.Clients.App.ViewModels
             }
             catch (TaskCanceledException)
             {
-                Console.WriteLine("Task was cancelled");
+                Console.WriteLine(AppResource.TaskCancelled);
             }
         }
     }
