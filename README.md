@@ -28,7 +28,7 @@ English | [简体中文](./README-zh_CN.md)
 
 ## 🌈 Online Examples
 
-- [Xamarin.Forms Client release 1.0](https://terminalmacs.com/terminalmacs-clients-app-android)
+- [Xamarin.Forms Client release 1.0](https://terminalmacs.com/terminalmacs-clients-app-android-2)
 
 ## 🖥 Environment Support
 

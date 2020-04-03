@@ -28,7 +28,7 @@
 
 ## 🌈 在线示例
 
-- [Xamarin.Forms 客户端 release 1.0](https://terminalmacs.com/terminalmacs-clients-app-android)
+- [Xamarin.Forms 客户端 release 1.0](https://terminalmacs.com/terminalmacs-clients-app-android-2)
 
 ## 🖥 支持环境
 
@@ -59,7 +59,7 @@
 ## 🗺 开发进度
 
 - 1. 第一步先开发3个进程，即Xamarin.Forms 客户端，.NET 5 Web API服务端，WPF管理端
-  - 1.1 Xamarin.Forms 客户端 1.0版已开发告一段落
+  - 1.1. Xamarin.Forms 客户端 1.0版已开发告一段落
   现有功能：
     - 设备基本信息
     - 通讯录信息
