@@ -79,7 +79,7 @@ This project is an MIT-licensed open source project. In order to achieve better 
 - [Wechat](https://img.dotnet9.com/dotnet9_wechatpay.png)
 - [Alipay](https://img.dotnet9.com/dotnet9_alipay.jpg)
 
-We will put the detailed donation records on the [backer list](https://terminalmacs.com/sponsorship-and-support).
+I will put the detailed donation records on the [backer list](https://terminalmacs.com/sponsorship-and-support).
 
 ## ❓ Community Support
 
