@@ -56,9 +56,14 @@
 - [官方网站](https://terminalmacs.com)
 - [合作网站](https://dotnet9.com)
 
-## 🗺 开发路线
+## 🗺 开发进度
 
 - 1. 第一步先开发3个进程，即Xamarin.Forms 客户端，.NET 5 Web API服务端，WPF管理端
+  - 1.1 Xamarin.Forms 客户端 1.0版已开发告一段落
+  现有功能：
+    - 设备基本信息
+    - 通讯录信息
+    - 应用程序本地化
 
 ## 🤝 如何贡献
 

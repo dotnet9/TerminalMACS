@@ -56,9 +56,14 @@ Empty
 - [Official website](https://terminalmacs.com)
 - [Cooperation website](https://dotnet9.com)
 
-## 🗺 Roadmap
+## 🗺 Development schedule
 
 - 1. The first step is to develop three processes, Xamarin.Forms Client,. Net 5 Web API Server (using ABP vNext Community Edition), WPF management end (Prism as MVVM, modular framework).
+  - 1.1 Xamarin.Forms Client Version 1.0 has come to an end
+  Existing features:
+    - Client base information
+    - Contact list
+    - Application localization
 
 ## 🤝 Contributing
 
