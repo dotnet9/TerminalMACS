@@ -3,6 +3,7 @@
 ################################################################################
 
 /.vs
+*.user
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/.vs
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/bin
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App/obj
@@ -10,5 +11,4 @@
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.Android/obj
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/bin
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
-*.user
 output/Clients/com.companyname.terminalmacs.clients.app.apk
