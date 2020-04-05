@@ -14,10 +14,12 @@ namespace TerminalMACS.Clients.App.ViewModels
             RaiseOpenDotnet9WebCommand = new Command(async () => await Browser.OpenAsync("https://dotnet9.com/category/terminalmacs/terminalmacs_client/xamarin-forms-terminalmacs_client"));
             RaiseOpenTerminalMACSWebCommand = new Command(async () => await Browser.OpenAsync("https://terminalmacs.com/category/client/xamarin-forms"));
             RaiseOpenCurrentClientSourceWebCommand = new Command(async () => await Browser.OpenAsync("https://github.com/dotnet9/TerminalMACS/tree/master/src/TerminalMACS.Clients/TerminalMACS.Clients.App"));
+            RaiseOpenDonationListWebCommand = new Command(async () => await Browser.OpenAsync("https://terminalmacs.com/sponsorship-and-support"));
         }
 
         public ICommand RaiseOpenDotnet9WebCommand { get; }
         public ICommand RaiseOpenTerminalMACSWebCommand { get; }
         public ICommand RaiseOpenCurrentClientSourceWebCommand { get; }
+        public ICommand RaiseOpenDonationListWebCommand { get; }
     }
 }

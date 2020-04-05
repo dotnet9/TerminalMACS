@@ -178,6 +178,15 @@ namespace TerminalMACS.Clients.App.Resx {
         }
         
         /// <summary>
+        ///   查找类似 Donation list 的本地化字符串。
+        /// </summary>
+        public static string DonationList_AboutPage {
+            get {
+                return ResourceManager.GetString("DonationList_AboutPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Official website 的本地化字符串。
         /// </summary>
         public static string OfficialWebsite_AboutPage {

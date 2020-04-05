@@ -164,6 +164,9 @@
     <value>Device Version</value>
     <comment>the version of the operating system.</comment>
   </data>
+  <data name="DonationList_AboutPage" xml:space="preserve">
+    <value>Donation list</value>
+  </data>
   <data name="OfficialWebsite_AboutPage" xml:space="preserve">
     <value>Official website</value>
   </data>

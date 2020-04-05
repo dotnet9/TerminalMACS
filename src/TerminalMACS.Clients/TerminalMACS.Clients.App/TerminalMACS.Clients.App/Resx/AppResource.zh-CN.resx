@@ -164,6 +164,9 @@
     <value>设备版本</value>
     <comment>the version of the operating system.</comment>
   </data>
+  <data name="DonationList_AboutPage" xml:space="preserve">
+    <value>捐助名单</value>
+  </data>
   <data name="OfficialWebsite_AboutPage" xml:space="preserve">
     <value>官方网站</value>
   </data>
