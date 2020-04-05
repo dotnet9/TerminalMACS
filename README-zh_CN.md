@@ -73,6 +73,7 @@
 
 本项目以 MIT 协议开源，为了能得到更好的且可持续的发展，我期望获得更多的支持者，我将把所得款项用于项目推广。你可以通过如下任何一种方式支持我:
 
+- [PayPal](https://www.paypal.me/terminalmacs?locale.x=zh_XC)
 - [微信](https://img.dotnet9.com/dotnet9_wechatpay.png)
 - [支付宝](https://img.dotnet9.com/dotnet9_alipay.jpg)
 

@@ -76,6 +76,7 @@ Shortly after the start of the project, you can leave a message at:
 
 This project is an MIT-licensed open source project. In order to achieve better and sustainable development of the project, I expect to gain more backers. I will use the proceeds for promotion. You can support me in any of the following ways:
 
+- [PayPal](https://www.paypal.me/terminalmacs)
 - [Wechat](https://img.dotnet9.com/dotnet9_wechatpay.png)
 - [Alipay](https://img.dotnet9.com/dotnet9_alipay.jpg)
 
