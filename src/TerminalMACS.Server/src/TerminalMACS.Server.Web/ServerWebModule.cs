@@ -1,36 +1,35 @@
 ﻿using System;
 using System.IO;
-using Microsoft.AspNetCore.Authentication.OAuth.Claims;
+using Localization.Resources.AbpUi;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using TerminalMACS.Server.EntityFrameworkCore;
 using TerminalMACS.Server.Localization;
 using TerminalMACS.Server.MultiTenancy;
 using TerminalMACS.Server.Web.Menus;
-using StackExchange.Redis;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Volo.Abp;
-using Volo.Abp.AspNetCore.Authentication.OAuth;
-using Volo.Abp.AspNetCore.Mvc.Client;
+using Volo.Abp.Account.Web;
+using Volo.Abp.AspNetCore.Authentication.JwtBearer;
+using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI;
 using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap;
+using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Serilog;
 using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
-using Volo.Abp.Caching;
 using Volo.Abp.FeatureManagement;
-using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Identity.Web;
+using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
-using Volo.Abp.MultiTenancy;
 using Volo.Abp.PermissionManagement.Web;
 using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.UI.Navigation.Urls;
@@ -42,14 +41,13 @@ namespace TerminalMACS.Server.Web
 {
     [DependsOn(
         typeof(ServerHttpApiModule),
-        typeof(ServerHttpApiClientModule),
-        typeof(AbpAspNetCoreAuthenticationOAuthModule),
-        typeof(AbpAspNetCoreMvcClientModule),
-        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        typeof(ServerApplicationModule),
+        typeof(ServerEntityFrameworkCoreDbMigrationsModule),
         typeof(AbpAutofacModule),
-        typeof(AbpFeatureManagementWebModule),
-        typeof(AbpHttpClientIdentityModelWebModule),
         typeof(AbpIdentityWebModule),
+        typeof(AbpAccountWebIdentityServerModule),
+        typeof(AbpAspNetCoreMvcUiBasicThemeModule),
+        typeof(AbpAspNetCoreAuthenticationJwtBearerModule),
         typeof(AbpTenantManagementWebModule),
         typeof(AbpAspNetCoreSerilogModule)
         )]
@@ -61,34 +59,28 @@ namespace TerminalMACS.Server.Web
             {
                 options.AddAssemblyResource(
                     typeof(ServerResource),
+                    typeof(ServerDomainModule).Assembly,
                     typeof(ServerDomainSharedModule).Assembly,
+                    typeof(ServerApplicationModule).Assembly,
                     typeof(ServerApplicationContractsModule).Assembly,
                     typeof(ServerWebModule).Assembly
                 );
             });
         }
-        
+
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             var hostingEnvironment = context.Services.GetHostingEnvironment();
             var configuration = context.Services.GetConfiguration();
 
-            ConfigureCache(configuration);
             ConfigureUrls(configuration);
             ConfigureAuthentication(context, configuration);
             ConfigureAutoMapper();
             ConfigureVirtualFileSystem(hostingEnvironment);
-            ConfigureNavigationServices(configuration);
-            ConfigureMultiTenancy();
+            ConfigureLocalizationServices();
+            ConfigureNavigationServices();
+            ConfigureAutoApiControllers();
             ConfigureSwaggerServices(context.Services);
-        }
-
-        private void ConfigureCache(IConfiguration configuration)
-        {
-            Configure<AbpDistributedCacheOptions>(options =>
-            {
-                options.KeyPrefix = "Server:";
-            });
         }
 
         private void ConfigureUrls(IConfiguration configuration)
@@ -99,43 +91,14 @@ namespace TerminalMACS.Server.Web
             });
         }
 
-        private void ConfigureMultiTenancy()
-        {
-            Configure<AbpMultiTenancyOptions>(options =>
-            {
-                options.IsEnabled = MultiTenancyConsts.IsEnabled;
-            });
-        }
-
         private void ConfigureAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
         {
-            context.Services.AddAuthentication(options =>
-                {
-                    options.DefaultScheme = "Cookies";
-                    options.DefaultChallengeScheme = "oidc";
-                })
-                .AddCookie("Cookies", options =>
-                {
-                    options.ExpireTimeSpan = TimeSpan.FromDays(365);
-                })
-                .AddOpenIdConnect("oidc", options =>
+            context.Services.AddAuthentication()
+                .AddIdentityServerAuthentication(options =>
                 {
                     options.Authority = configuration["AuthServer:Authority"];
-                    options.RequireHttpsMetadata = true;
-                    options.ResponseType = OpenIdConnectResponseType.CodeIdToken;
-
-                    options.ClientId = configuration["AuthServer:ClientId"];
-                    options.ClientSecret = configuration["AuthServer:ClientSecret"];
-
-                    options.SaveTokens = true;
-                    options.GetClaimsFromUserInfoEndpoint = true;
-
-                    options.Scope.Add("role");
-                    options.Scope.Add("email");
-                    options.Scope.Add("phone");
-                    options.Scope.Add("Server");
-
-                    options.ClaimActions.MapAbpClaimTypes();
+                    options.RequireHttpsMetadata = false;
+                    options.ApiName = "Server";
                 });
         }
 
@@ -144,6 +107,7 @@ namespace TerminalMACS.Server.Web
             Configure<AbpAutoMapperOptions>(options =>
             {
                 options.AddMaps<ServerWebModule>();
+
             });
         }
 
@@ -153,18 +117,47 @@ namespace TerminalMACS.Server.Web
             {
                 Configure<AbpVirtualFileSystemOptions>(options =>
                 {
-                    options.FileSets.ReplaceEmbeddedByPhysical<ServerDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}TerminalMACS.Server.Domain"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ServerDomainSharedModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}TerminalMACS.Server.Domain.Shared"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ServerDomainModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}TerminalMACS.Server.Domain"));
                     options.FileSets.ReplaceEmbeddedByPhysical<ServerApplicationContractsModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}TerminalMACS.Server.Application.Contracts"));
+                    options.FileSets.ReplaceEmbeddedByPhysical<ServerApplicationModule>(Path.Combine(hostingEnvironment.ContentRootPath, $"..{Path.DirectorySeparatorChar}TerminalMACS.Server.Application"));
                     options.FileSets.ReplaceEmbeddedByPhysical<ServerWebModule>(hostingEnvironment.ContentRootPath);
                 });
             }
         }
 
-        private void ConfigureNavigationServices(IConfiguration configuration)
+        private void ConfigureLocalizationServices()
+        {
+            Configure<AbpLocalizationOptions>(options =>
+            {
+                options.Resources
+                    .Get<ServerResource>()
+                    .AddBaseTypes(
+                        typeof(AbpUiResource)
+                    );
+
+                options.Languages.Add(new LanguageInfo("cs", "cs", "Čeština"));
+                options.Languages.Add(new LanguageInfo("en", "en", "English"));
+                options.Languages.Add(new LanguageInfo("pt-BR", "pt-BR", "Português"));
+                options.Languages.Add(new LanguageInfo("tr", "tr", "Türkçe"));
+                options.Languages.Add(new LanguageInfo("zh-Hans", "zh-Hans", "简体中文"));
+                options.Languages.Add(new LanguageInfo("zh-Hant", "zh-Hant", "繁體中文"));
+            });
+        }
+
+        private void ConfigureNavigationServices()
         {
             Configure<AbpNavigationOptions>(options =>
             {
-                options.MenuContributors.Add(new ServerMenuContributor(configuration));
+                options.MenuContributors.Add(new ServerMenuContributor());
+            });
+        }
+
+        private void ConfigureAutoApiControllers()
+        {
+            Configure<AbpAspNetCoreMvcOptions>(options =>
+            {
+                options.ConventionalControllers.Create(typeof(ServerApplicationModule).Assembly);
             });
         }
 
@@ -178,25 +171,6 @@ namespace TerminalMACS.Server.Web
                     options.CustomSchemaIds(type => type.FullName);
                 }
             );
-        }
-
-        private void ConfigureRedis(
-            ServiceConfigurationContext context,
-            IConfiguration configuration,
-            IWebHostEnvironment hostingEnvironment)
-        {
-            context.Services.AddStackExchangeRedisCache(options =>
-            {
-                options.Configuration = configuration["Redis:Configuration"];
-            });
-
-            if (!hostingEnvironment.IsDevelopment())
-            {
-                var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-                context.Services
-                    .AddDataProtection()
-                    .PersistKeysToStackExchangeRedis(redis, "Server-Protection-Keys");
-            }
         }
 
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
@@ -214,27 +188,23 @@ namespace TerminalMACS.Server.Web
             {
                 app.UseErrorPage();
             }
-
             app.UseVirtualFiles();
             app.UseRouting();
             app.UseAuthentication();
+            app.UseJwtTokenMiddleware();
 
             if (MultiTenancyConsts.IsEnabled)
             {
                 app.UseMultiTenancy();
             }
-
+            app.UseIdentityServer();
             app.UseAuthorization();
-
-
             app.UseAbpRequestLocalization();
-
             app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
                 options.SwaggerEndpoint("/swagger/v1/swagger.json", "Server API");
             });
-
             app.UseAuditing();
             app.UseAbpSerilogEnrichers();
             app.UseMvcWithDefaultRouteAndArea();

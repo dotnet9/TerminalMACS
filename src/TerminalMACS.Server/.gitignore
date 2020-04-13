@@ -253,7 +253,7 @@ paket-files/
 
 # Server
 src/TerminalMACS.Server.Web/Logs/*
-src/TerminalMACS.Server.Web/Logs/*
+src/TerminalMACS.Server.Web.Host/Logs/*
 src/TerminalMACS.Server.IdentityServer/Logs/*
 src/TerminalMACS.Server.HttpApi.Host/Logs/*
 src/TerminalMACS.Server.HttpApi.HostWithIds/Logs/*
