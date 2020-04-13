@@ -12,4 +12,5 @@
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/bin
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
 output/Clients/com.companyname.terminalmacs.clients.app.apk
-src/TerminalMACS.Server/.vs
+src/TerminalMACS.Server/.vs/TerminalMACS.Server/DesignTimeBuild/.dtbcache.v2
+src/TerminalMACS.Server/.vs/TerminalMACS.Server/v16/.suo
