@@ -13,3 +13,10 @@
 /src/TerminalMACS.Clients/TerminalMACS.Clients.App/TerminalMACS.Clients.App.iOS/obj
 output/Clients/com.companyname.terminalmacs.clients.app.apk
 src/TerminalMACS.Server/.vs
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/.vs
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure.UI/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure.UI/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/obj

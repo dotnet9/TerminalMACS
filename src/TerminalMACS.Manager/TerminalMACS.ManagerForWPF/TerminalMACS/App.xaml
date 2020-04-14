@@ -1,0 +1,8 @@
+﻿<unity:PrismApplication   x:Class="TerminalMACS.App"
+                          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                          xmlns:unity="clr-namespace:Prism.Unity;assembly=Prism.Unity.Wpf">
+    <Application.Resources>
+         
+    </Application.Resources>
+</unity:PrismApplication>
