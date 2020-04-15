@@ -5,8 +5,4 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\TerminalMACS.Infrastructure\TerminalMACS.Infrastructure.csproj" />
-  </ItemGroup>
-
 </Project>

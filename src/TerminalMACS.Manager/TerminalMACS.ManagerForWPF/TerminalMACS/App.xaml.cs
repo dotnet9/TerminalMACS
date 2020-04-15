@@ -1,27 +1,40 @@
 ﻿using Prism.Ioc;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+using Prism.Modularity;
+using Prism.Unity;
+using System.IO;
 using System.Windows;
+using TerminalMACS.Infrastructure.UI;
+using TerminalMACS.Views;
 
 namespace TerminalMACS
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App
+    public partial class App : PrismApplication
     {
+        App()
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
+        }
         protected override Window CreateShell()
         {
-            throw new NotImplementedException();
+            LanguageHelper.SetLanguage();
+            return Container.Resolve<MainWindow>();
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            throw new NotImplementedException();
+        }
+
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            string modulePath = @".\Modules";
+            if(!Directory.Exists(modulePath))
+            {
+                Directory.CreateDirectory(modulePath);
+            }
+            return new DirectoryModuleCatalog() { ModulePath = modulePath };
         }
     }
 }

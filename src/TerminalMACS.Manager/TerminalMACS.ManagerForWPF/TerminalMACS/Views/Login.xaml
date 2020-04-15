@@ -1,4 +1,4 @@
-﻿<Window x:Class="TerminalMACS.Views.MainWindow"
+﻿<Window x:Class="TerminalMACS.Views.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,10 +6,8 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         mc:Ignorable="d"
-        Title="{DynamicResource AppTitle}" Height="450" Width="800">
-    <StackPanel>
-        <Button Content="Chinese" Click="ChangeLanguage_Click"/>
-        <Button Content="Japanese" Click="ChangeLanguage_Click"/>
-        <Button Content="English" Click="ChangeLanguage_Click"/>
-    </StackPanel>
+        Title="{Binding Title}" Height="450" Width="800">
+    <Grid>
+        
+    </Grid>
 </Window>

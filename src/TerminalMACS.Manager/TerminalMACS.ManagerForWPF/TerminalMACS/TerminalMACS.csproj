@@ -4,14 +4,31 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="I18nResources\ResKeys.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ResKeys.tt</DependentUpon>
-    </None>
+    <None Remove="Images\lang\Chinese.png" />
+    <None Remove="Images\lang\English.png" />
+    <None Remove="Images\lang\Japanese.png" />
+    <None Remove="Images\logo.ico" />
+    <None Remove="Images\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="I18nResources\Chinese.xaml" />
+    <Page Remove="I18nResources\Japanese.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="I18nResources\Japanese.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="I18nResources\Chinese.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -23,10 +40,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="I18nResources\ResKeys.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ResKeys.cs</LastGenOutput>
-    </None>
+    <Resource Include="Images\lang\Japanese.png" />
+    <Resource Include="Images\lang\English.png" />
+    <Resource Include="Images\lang\Chinese.png" />
+    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,18 +52,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="I18nResources\UiResources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>UiResources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="I18nResources\UiResources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>UiResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Page Update="I18nResources\English.xaml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
   </ItemGroup>
 
 </Project>

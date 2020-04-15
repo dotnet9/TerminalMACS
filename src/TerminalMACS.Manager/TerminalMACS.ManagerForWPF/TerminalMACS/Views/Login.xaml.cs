@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,26 +9,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TerminalMACS.Infrastructure.UI;
 
 namespace TerminalMACS.Views
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// Login.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Login : Window
     {
-
-        public MainWindow()
+        public Login()
         {
             InitializeComponent();
-        }
-
-
-        private void ChangeLanguage_Click(object sender, RoutedEventArgs e)
-        {
-            string language = (sender as Button).Content.ToString();
-            LanguageHelper.SetLanguage(language);
         }
     }
 }
