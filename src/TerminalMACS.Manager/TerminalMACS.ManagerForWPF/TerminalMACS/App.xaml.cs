@@ -8,9 +8,6 @@ using TerminalMACS.Views;
 
 namespace TerminalMACS
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : PrismApplication
     {
         App()

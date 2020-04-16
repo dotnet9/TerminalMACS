@@ -8,43 +8,52 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\lang\Chinese.png" />
-    <None Remove="Images\lang\English.png" />
-    <None Remove="Images\lang\Japanese.png" />
+    <None Remove="Images\about.png" />
+    <None Remove="Images\code.png" />
+    <None Remove="Images\Contact.png" />
     <None Remove="Images\logo.ico" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\mynewwechat.jpg" />
+    <None Remove="Images\setting.png" />
+    <None Remove="Images\WeChat-public-address.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Page Remove="I18nResources\Chinese.xaml" />
-    <Page Remove="I18nResources\Japanese.xaml" />
+    <Page Remove="I18nResources\ja.xaml" />
+    <Page Remove="I18nResources\zh-CN.xaml" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="I18nResources\Japanese.xaml">
+    <Content Include="I18nResources\ja.xaml">
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="I18nResources\Chinese.xaml">
+    <Content Include="I18nResources\zh-CN.xaml">
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="1.2.4-ci1261" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.1.1-ci1261" />
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AduSkin\AduSkin.csproj" />
     <ProjectReference Include="..\TerminalMACS.Infrastructure.UI\TerminalMACS.Infrastructure.UI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\lang\Japanese.png" />
-    <Resource Include="Images\lang\English.png" />
-    <Resource Include="Images\lang\Chinese.png" />
+    <Resource Include="Images\about.png" />
+    <Resource Include="Images\code.png" />
+    <Resource Include="Images\Contact.png" />
     <Resource Include="Images\logo.ico" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\mynewwechat.jpg" />
+    <Resource Include="Images\setting.png" />
+    <Resource Include="Images\WeChat-public-address.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,7 +61,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="I18nResources\English.xaml">
+    <Page Update="I18nResources\en.xaml">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
   </ItemGroup>

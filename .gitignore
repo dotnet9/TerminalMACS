@@ -20,3 +20,5 @@ src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure.
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure.UI/obj
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/bin
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/AduSkin/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/AduSkin/obj

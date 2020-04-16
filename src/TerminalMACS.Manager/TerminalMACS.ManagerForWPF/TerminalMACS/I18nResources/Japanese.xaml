@@ -1,7 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
-    <sys:String x:Key="AppTitle">
-        マルチターミナル資源管理と検出システム
-    </sys:String>
-</ResourceDictionary>
