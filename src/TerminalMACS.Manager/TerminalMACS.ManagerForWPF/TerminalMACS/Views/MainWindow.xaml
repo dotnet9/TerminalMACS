@@ -54,12 +54,16 @@
             </Metro:MetroTitleMenuItem>
 
             <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_About}" Icon="/Images/about.png">
+                <Metro:MetroMenuItem Header="Dotnet9" Command="AduOpenLink:ControlCommands.OpenLink" 
+                                     CommandParameter="https://dotnet9.com/"/>
                 <Metro:MetroMenuItem Header="{DynamicResource MainMenu_CNBlogs}" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://www.cnblogs.com/Dotnet9-com/"/>
                 <Metro:MetroMenuItem Header="CSDN" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://me.csdn.net/HenryMoore"/>
                 <Metro:MetroMenuItem Header="{DynamicResource MainMenu_TouTiao}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://www.toutiao.com/c/user/98075192460/#mid=1651788205627396"/>
+                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_SponsorshipAndSupport}" Command="AduOpenLink:ControlCommands.OpenLink"
+                                     CommandParameter="https://terminalmacs.com/sponsorship-and-support"/>
                 <Metro:MetroMenuItem Header="{DynamicResource MainMenu_About}" 
                                      Click="ShowAbout_Click"/>
             </Metro:MetroTitleMenuItem>

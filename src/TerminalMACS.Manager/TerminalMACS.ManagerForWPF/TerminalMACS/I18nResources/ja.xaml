@@ -25,6 +25,9 @@
     <sys:String x:Key="MainMenu_TouTiao">
         Tou Tiao
     </sys:String>
+    <sys:String x:Key="MainMenu_SponsorshipAndSupport">
+        サポート
+    </sys:String>
     <sys:String x:Key="MainMenu_Setting">
         設定
     </sys:String>

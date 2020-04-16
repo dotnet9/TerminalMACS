@@ -11,7 +11,7 @@
         BorderBrush="{StaticResource DefaultBrush}"
         Title="{DynamicResource MainMenu_About}" Height="600" Width="800">
     <StackPanel>
-        <Image Source="/Images/logo.png" Width="128" HorizontalAlignment="Center"/>
+        <Image Source="/Images/logo.png" Width="64" HorizontalAlignment="Center"/>
         <TextBlock Margin="0 15" Foreground="{StaticResource DefaultBrush}"
                    HorizontalAlignment="Center" 
                    TextWrapping="WrapWithOverflow">
@@ -47,7 +47,8 @@
                         <ImageBrush ImageSource="/Images/WeChat-public-address.jpg"/>
                     </Border.Background>
                 </Border>
-                <TextBlock Text="{DynamicResource About_AddWeChatOfficialAccount}" HorizontalAlignment="Center"/>
+                <TextBlock Text="{DynamicResource About_AddWeChatOfficialAccount}"
+                           Width="170" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center"/>
             </StackPanel>
             <StackPanel>
                 <Border Margin="30 5" Height="150" Width="150" CornerRadius="10">
@@ -55,14 +56,15 @@
                         <ImageBrush ImageSource="/Images/mynewwechat.jpg"/>
                     </Border.Background>
                 </Border>
-                <TextBlock Text="{DynamicResource About_AddAuthorWeChat}" HorizontalAlignment="Center"/>
+                <TextBlock Text="{DynamicResource About_AddAuthorWeChat}" 
+                           Width="170" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
 
         <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="DarkOrange" 
                     FontSize="20" Text="{DynamicResource About_Thanks}" Margin="0 20 0 0"/>
         <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
-            <Metro:HCShield Subject="WPF" Status="AduSkin" Color="#6C819E" Margin="10,0"
+            <Metro:HCShield Subject="WPF" Status="AduSkin" Color="#F06632" Margin="10,0"
                             Command="AduOpenLink:ControlCommands.OpenLink" 
                             CommandParameter="https://github.com/aduskin">
                 <Metro:HCShield.ToolTip>
@@ -88,7 +90,7 @@
             </Metro:HCShield>
         </StackPanel>
 
-        <TextBlock Text="Copyright © 2020-2020 TerminalMACS" 
+        <TextBlock Text="Copyright © 2020-2020 TerminalMACS.COM" 
                    Foreground="#ccc" Margin="0 10 0 14"
                    HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
     </StackPanel>

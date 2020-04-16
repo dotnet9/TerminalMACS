@@ -28,7 +28,9 @@ namespace TerminalMACS.Views
 
         private void ShowAbout_Click(object sender, RoutedEventArgs e)
         {
-            new About().ShowDialog();
+            var aboutView = new About();
+            aboutView.Owner = this;
+            aboutView.ShowDialog();
         }
     }
 }

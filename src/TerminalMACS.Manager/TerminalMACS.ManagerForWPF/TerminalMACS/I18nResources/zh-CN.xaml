@@ -25,6 +25,9 @@
     <sys:String x:Key="MainMenu_TouTiao">
         今日头条
     </sys:String>
+    <sys:String x:Key="MainMenu_SponsorshipAndSupport">
+        赞助支持
+    </sys:String>
     <sys:String x:Key="MainMenu_Setting">
         设置
     </sys:String>
