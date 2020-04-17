@@ -5,6 +5,12 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.1.0</FileVersion>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://terminalmacs.com/</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReleaseNotes>TerminalMACS桌面管理端WPF版本</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +22,10 @@
     <None Remove="Images\mynewwechat.jpg" />
     <None Remove="Images\setting.png" />
     <None Remove="Images\WeChat-public-address.jpg" />
+    <None Include="Images\logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

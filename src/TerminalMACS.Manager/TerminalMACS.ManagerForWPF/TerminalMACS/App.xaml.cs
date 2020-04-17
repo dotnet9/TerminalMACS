@@ -12,7 +12,6 @@ namespace TerminalMACS
     {
         App()
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
         }
         protected override Window CreateShell()
         {
@@ -27,7 +26,7 @@ namespace TerminalMACS
         protected override IModuleCatalog CreateModuleCatalog()
         {
             string modulePath = @".\Modules";
-            if(!Directory.Exists(modulePath))
+            if (!Directory.Exists(modulePath))
             {
                 Directory.CreateDirectory(modulePath);
             }

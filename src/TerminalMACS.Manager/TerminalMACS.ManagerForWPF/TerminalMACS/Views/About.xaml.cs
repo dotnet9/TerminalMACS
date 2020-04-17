@@ -1,4 +1,5 @@
 ﻿using AduSkin.Controls.Metro;
+using System.Reflection;
 
 namespace TerminalMACS.Views
 {
@@ -7,6 +8,8 @@ namespace TerminalMACS.Views
         public About()
         {
             InitializeComponent();
+
+            this.txtVersion.Text = $"v {Assembly.GetExecutingAssembly().GetName().Version.ToString()}";
         }
     }
 }

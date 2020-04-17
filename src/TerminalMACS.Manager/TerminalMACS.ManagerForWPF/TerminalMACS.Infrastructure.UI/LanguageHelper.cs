@@ -29,6 +29,10 @@ namespace TerminalMACS.Infrastructure.UI
                 }
                 Application.Current.Resources.MergedDictionaries.Add(lanRd);
                 ConfigHelper.SetKey(KEY_OF_LANGUAGE, language);
+
+                var culture = new System.Globalization.CultureInfo(language);
+                System.Globalization.CultureInfo.CurrentCulture = culture;
+                System.Globalization.CultureInfo.CurrentUICulture = culture;
             }
             catch { }
         }
