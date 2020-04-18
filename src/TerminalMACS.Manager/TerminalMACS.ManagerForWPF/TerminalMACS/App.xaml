@@ -10,6 +10,9 @@
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/BaseStyle.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/ShowControl.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/Converter.xaml"/>
+
+
+                <ResourceDictionary Source="pack://application:,,,/TerminalMACS.Controls;component/Styles/TerminalMACS.Brushes.Navy.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

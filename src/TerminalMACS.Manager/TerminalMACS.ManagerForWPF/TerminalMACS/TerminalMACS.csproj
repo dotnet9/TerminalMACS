@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>Flase</AppendTargetFrameworkToOutputPath>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>Images\logo.ico</ApplicationIcon>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
@@ -11,6 +12,14 @@
     <PackageProjectUrl>https://terminalmacs.com/</PackageProjectUrl>
     <PackageIcon>logo.png</PackageIcon>
     <PackageReleaseNotes>TerminalMACS桌面管理端WPF版本</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\Build\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\Build\Release\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -52,6 +61,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AduSkin\AduSkin.csproj" />
+    <ProjectReference Include="..\TerminalMACS.Controls\TerminalMACS.Controls.csproj" />
     <ProjectReference Include="..\TerminalMACS.Infrastructure.UI\TerminalMACS.Infrastructure.UI.csproj" />
   </ItemGroup>
 

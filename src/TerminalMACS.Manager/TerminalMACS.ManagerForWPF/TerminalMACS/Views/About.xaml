@@ -84,7 +84,7 @@
         <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Center">
             <Metro:HCShield Subject="WPF" Status="AduSkin" Color="#F06632" Margin="10,0"
                             Command="AduOpenLink:ControlCommands.OpenLink" 
-                            CommandParameter="https://github.com/aduskin">
+                            CommandParameter="https://github.com/aduskin/AduSkin">
                 <Metro:HCShield.ToolTip>
                     <Metro:AduToolTip Content="{DynamicResource About_BrowseOpenSourceFramework}"
                                       IsShowShadow="True" FontSize="12" Padding="10,6" PlacementEx="BottomCenter" />

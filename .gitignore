@@ -22,3 +22,12 @@ src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Infrastructure/obj
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/AduSkin/bin
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/AduSkin/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/Build
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Client/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Client/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Controls/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Controls/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Home/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Home/obj
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Server/bin
+src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Server/obj

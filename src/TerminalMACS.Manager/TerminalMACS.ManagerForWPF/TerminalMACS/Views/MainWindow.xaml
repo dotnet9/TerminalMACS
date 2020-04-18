@@ -6,12 +6,15 @@
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                    xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
                    xmlns:AduOpenLink="clr-namespace:AduSkin.Interactivity;assembly=AduSkin"
-                   prism:ViewModelLocator.AutoWireViewModel="True" MinWidth="600" MinHeight="350"
-        d:DesignHeight="1200" d:DesignWidth="1600"
-        BorderThickness="0" WindowStyle="None"
-        Background="#FFF" mc:Ignorable="d"
-        BorderBrush="{StaticResource DefaultBrush}"
-        Title="{DynamicResource AppTitle}" Icon="/Images/logo.png">
+                   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                   prism:ViewModelLocator.AutoWireViewModel="True" 
+                   MinWidth="600" MinHeight="350"
+                   d:DesignHeight="1200" d:DesignWidth="1600"
+                   BorderThickness="0" WindowStyle="None"
+                   Background="#FFF" mc:Ignorable="d"
+                   BorderBrush="{StaticResource DefaultBrush}"
+                   Title="{DynamicResource AppTitle}"
+                   Icon="/Images/logo.png">
     <Metro:MetroWindow.Menu>
         <Metro:MetroTitleMenu Height="40">
             <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_Contact}" Icon="/Images/Contact.png">
@@ -74,4 +77,8 @@
 
         </Metro:MetroTitleMenu>
     </Metro:MetroWindow.Menu>
+
+    <materialDesign:DialogHost Identifier="RootDialog">
+        
+    </materialDesign:DialogHost>
 </Metro:MetroWindow>
