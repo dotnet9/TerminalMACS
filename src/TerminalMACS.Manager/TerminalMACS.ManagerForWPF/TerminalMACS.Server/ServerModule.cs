@@ -1,20 +1,24 @@
-﻿using TerminalMACS.Server.Views;
-using Prism.Ioc;
-using Prism.Modularity;
+﻿using Prism.Ioc;
 using Prism.Regions;
+using TerminalMACS.Infrastructure.UI;
+using TerminalMACS.Infrastructure.UI.Modularity;
+using TerminalMACS.Server.Views;
+using Unity;
 
 namespace TerminalMACS.Server
 {
-    public class ServerModule : IModule
+    public class ServerModule : ModuleBase
     {
-        public void OnInitialized(IContainerProvider containerProvider)
+        private readonly IRegionManager _regionManager;
+        public ServerModule(IUnityContainer container, IRegionManager regionManager) : base(container)
         {
-
+            _regionManager = regionManager;
         }
 
-        public void RegisterTypes(IContainerRegistry containerRegistry)
+        public override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
+            _regionManager.RegisterViewWithRegion(RegionNames.MainTabRegion, typeof(MainTabItem));
+            _regionManager.RegisterViewWithRegion(RegionNames.SettingsTabRegion, typeof(SettingsTabItem));
         }
     }
 }

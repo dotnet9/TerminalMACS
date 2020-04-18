@@ -54,8 +54,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaterialDesignColors" Version="1.2.4-ci1261" />
-    <PackageReference Include="MaterialDesignThemes" Version="3.1.1-ci1261" />
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
   </ItemGroup>
 

@@ -7,7 +7,9 @@
                    xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
                    xmlns:AduOpenLink="clr-namespace:AduSkin.Interactivity;assembly=AduSkin"
                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                   xmlns:ui="clr-namespace:TerminalMACS.Infrastructure.UI;assembly=TerminalMACS.Infrastructure.UI"
                    prism:ViewModelLocator.AutoWireViewModel="True" 
+                   WindowStartupLocation="CenterScreen"
                    MinWidth="600" MinHeight="350"
                    d:DesignHeight="1200" d:DesignWidth="1600"
                    BorderThickness="0" WindowStyle="None"
@@ -25,14 +27,14 @@
                 <Metro:MetroMenuItem Header="{DynamicResource MainMenu_Email}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="mailto:632871194@qq.com" />
             </Metro:MetroTitleMenuItem>
-            
+
             <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_SourceCode}"  Icon="/Images/code.png">
                 <Metro:MetroMenuItem Header="GitHub" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://github.com/dotnet9/TerminalMACS"/>
                 <Metro:MetroMenuItem Header="Gitee" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://gitee.com/dotnet9/TerminalMACS"/>
             </Metro:MetroTitleMenuItem>
-                        
+
             <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_Setting}" Icon="/Images/setting.png">
                 <Metro:MetroMenuItem Header="{DynamicResource MainMenu_Language}" >
                     <Metro:MetroMenuItem Header="中文" Tag="zh-CN" Click="ChangeLanguage_Click"/>
@@ -78,7 +80,17 @@
         </Metro:MetroTitleMenu>
     </Metro:MetroWindow.Menu>
 
-    <materialDesign:DialogHost Identifier="RootDialog">
-        
-    </materialDesign:DialogHost>
+    <Grid Background="{StaticResource LightGreyBackgroundBrush}" Margin="0 -1 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="68"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Fill="{StaticResource PrimaryHueDarkBrush}"/>
+
+        <TabControl Grid.ColumnSpan="2" SelectedIndex="0"
+                    Style="{StaticResource MainTabControlStyle}" 
+                    ItemContainerStyle="{StaticResource MainTabItemStyle}"
+                    prism:RegionManager.RegionName="{x:Static ui:RegionNames.MainTabRegion}"/>
+    </Grid>
 </Metro:MetroWindow>

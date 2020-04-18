@@ -13,6 +13,7 @@
 
 
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS.Controls;component/Styles/TerminalMACS.Brushes.Navy.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/TerminalMACS.Controls;component/Styles/TerminalMACS.Styles.TabControl.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

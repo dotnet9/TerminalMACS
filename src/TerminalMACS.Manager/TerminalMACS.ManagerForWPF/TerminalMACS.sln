@@ -11,13 +11,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AduSkin", "AduSkin\AduSkin.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainModules", "MainModules", "{A9962531-F9F1-4B56-B0CE-345D2E2D6C61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Home", "TerminalMACS.Home\TerminalMACS.Home.csproj", "{C0900AB2-042F-4D15-9AB6-15BE5AF64AEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Home", "TerminalMACS.Home\TerminalMACS.Home.csproj", "{C0900AB2-042F-4D15-9AB6-15BE5AF64AEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Server", "TerminalMACS.Server\TerminalMACS.Server.csproj", "{13A16DF3-AACC-41EB-A2B8-636DDBC73C17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Server", "TerminalMACS.Server\TerminalMACS.Server.csproj", "{13A16DF3-AACC-41EB-A2B8-636DDBC73C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Client", "TerminalMACS.Client\TerminalMACS.Client.csproj", "{7B7FF627-5DFE-4725-9E73-DB7B0A071B54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Client", "TerminalMACS.Client\TerminalMACS.Client.csproj", "{7B7FF627-5DFE-4725-9E73-DB7B0A071B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Controls", "TerminalMACS.Controls\TerminalMACS.Controls.csproj", "{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Controls", "TerminalMACS.Controls\TerminalMACS.Controls.csproj", "{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Infrastructure", "TerminalMACS.Infrastructure\TerminalMACS.Infrastructure.csproj", "{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿<TabItem x:Class="TerminalMACS.Home.Views.MainTabItem"
+﻿<TabItem x:Class="TerminalMACS.Server.Views.MainTabItem"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -12,12 +12,12 @@
                 <RowDefinition Height="2"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <materialDesign:PackIcon Kind="Home" 
+            <materialDesign:PackIcon Kind="Server"
                                      Foreground="{StaticResource LightGreyBackgroundBrush}" 
                                      HorizontalAlignment="Center" Height="22" Width="22"/>
-            <TextBlock Grid.Row="2" Text="Home" HorizontalAlignment="Center" 
+            <TextBlock Grid.Row="2" Text="Server" HorizontalAlignment="Center"
                        Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10"/>
         </Grid>
     </TabItem.Header>
-    <Grid Background="Red"/>
+    <Grid Background="DarkOrange"/>
 </TabItem>

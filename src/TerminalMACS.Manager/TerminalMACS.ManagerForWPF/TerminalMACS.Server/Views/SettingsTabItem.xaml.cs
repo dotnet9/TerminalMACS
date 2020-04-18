@@ -1,4 +1,4 @@
-﻿namespace TerminalMACS.Home.Views
+﻿namespace TerminalMACS.Server.Views
 {
     public partial class SettingsTabItem
     {
