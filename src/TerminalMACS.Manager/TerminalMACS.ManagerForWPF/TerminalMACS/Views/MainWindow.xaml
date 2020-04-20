@@ -38,11 +38,9 @@
             </Metro:MetroTitleMenuItem>
 
             <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Setting}}" Icon="/Images/setting.png">
-                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Language}}" >
-                    <Metro:MetroMenuItem Header="中文" Tag="zh-CN" Click="ChangeLanguage_Click"/>
-                    <Metro:MetroMenuItem Header="English" Tag="en-US" Click="ChangeLanguage_Click"/>
-                    <Metro:MetroMenuItem Header="日本語" Tag="ja" Click="ChangeLanguage_Click"/>
-                </Metro:MetroMenuItem>
+                <Metro:MetroMenuItem Header="中文" Tag="zh-CN" Click="ChangeLanguage_Click"/>
+                <Metro:MetroMenuItem Header="English" Tag="en-US" Click="ChangeLanguage_Click"/>
+                <Metro:MetroMenuItem Header="日本語" Tag="ja" Click="ChangeLanguage_Click"/>
                 <Metro:MetroMenuSeparator />
                 <MenuItem Style="{StaticResource MenuItem_NonStyle}" Height="30" >
                     <MenuItem.Header>
