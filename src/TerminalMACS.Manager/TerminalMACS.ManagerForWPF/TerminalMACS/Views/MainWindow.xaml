@@ -8,6 +8,8 @@
                    xmlns:AduOpenLink="clr-namespace:AduSkin.Interactivity;assembly=AduSkin"
                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                    xmlns:ui="clr-namespace:TerminalMACS.Infrastructure.UI;assembly=TerminalMACS.Infrastructure.UI"
+                   xmlns:markup="clr-namespace:WpfExtensions.Xaml.Markup;assembly=WpfExtensions.Xaml"
+                   xmlns:i18NResources="clr-namespace:TerminalMACS.I18nResources"
                    prism:ViewModelLocator.AutoWireViewModel="True" 
                    WindowStartupLocation="CenterScreen"
                    MinWidth="600" MinHeight="350"
@@ -15,30 +17,30 @@
                    BorderThickness="0" WindowStyle="None"
                    Background="#FFF" mc:Ignorable="d"
                    BorderBrush="{StaticResource DefaultBrush}"
-                   Title="{DynamicResource AppTitle}"
+                   Title="{markup:I18n {x:Static i18NResources:Language.AppTitle}}"
                    Icon="/Images/logo.png">
     <Metro:MetroWindow.Menu>
         <Metro:MetroTitleMenu Height="40">
-            <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_Contact}" Icon="/Images/Contact.png">
+            <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Contact}}" Icon="/Images/Contact.png">
                 <Metro:MetroMenuItem Header="QQ"  Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="http://wpa.qq.com/msgrd?v=3&amp;uin=632871194&amp;site=qq&amp;menu=yes"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_QQGroup}" Command="AduOpenLink:ControlCommands.OpenLink"
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_QQGroup}}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://jq.qq.com/?_wv=1027&amp;k=50b36fD"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_Email}" Command="AduOpenLink:ControlCommands.OpenLink"
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Email}}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="mailto:632871194@qq.com" />
             </Metro:MetroTitleMenuItem>
 
-            <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_SourceCode}"  Icon="/Images/code.png">
+            <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_SourceCode}}"  Icon="/Images/code.png">
                 <Metro:MetroMenuItem Header="GitHub" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://github.com/dotnet9/TerminalMACS"/>
                 <Metro:MetroMenuItem Header="Gitee" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://gitee.com/dotnet9/TerminalMACS"/>
             </Metro:MetroTitleMenuItem>
 
-            <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_Setting}" Icon="/Images/setting.png">
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_Language}" >
+            <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Setting}}" Icon="/Images/setting.png">
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_Language}}" >
                     <Metro:MetroMenuItem Header="中文" Tag="zh-CN" Click="ChangeLanguage_Click"/>
-                    <Metro:MetroMenuItem Header="English" Tag="en" Click="ChangeLanguage_Click"/>
+                    <Metro:MetroMenuItem Header="English" Tag="en-US" Click="ChangeLanguage_Click"/>
                     <Metro:MetroMenuItem Header="日本語" Tag="ja" Click="ChangeLanguage_Click"/>
                 </Metro:MetroMenuItem>
                 <Metro:MetroMenuSeparator />
@@ -49,7 +51,7 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="{DynamicResource MainMenu_ThemeColor}" VerticalAlignment="Center" Margin="33 0 -10 0"/>
+                            <TextBlock Text="{markup:I18n {x:Static i18NResources:Language.MainMenu_ThemeColor}}" VerticalAlignment="Center" Margin="33 0 -10 0"/>
                             <Metro:MetroColorPicker x:Name="Theme" Width="50" Height="20" Grid.Column="1"
                                                     Background="{StaticResource DefaultBrush}"
                                                     DefaultColor="{StaticResource DefaultBrush}" />
@@ -58,22 +60,22 @@
                 </MenuItem>
             </Metro:MetroTitleMenuItem>
 
-            <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_About}" Icon="/Images/about.png">
+            <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_About}}" Icon="/Images/about.png">
                 <Metro:MetroMenuItem Header="Dotnet9" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://dotnet9.com/"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_CNBlogs}" Command="AduOpenLink:ControlCommands.OpenLink" 
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_CNBlogs}}" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://www.cnblogs.com/Dotnet9-com/"/>
                 <Metro:MetroMenuItem Header="CSDN" Command="AduOpenLink:ControlCommands.OpenLink" 
                                      CommandParameter="https://me.csdn.net/HenryMoore"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_TouTiao}" Command="AduOpenLink:ControlCommands.OpenLink"
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_TouTiao}}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://www.toutiao.com/c/user/98075192460/#mid=1651788205627396"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_SponsorshipAndSupport}" Command="AduOpenLink:ControlCommands.OpenLink"
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_SponsorshipAndSupport}}" Command="AduOpenLink:ControlCommands.OpenLink"
                                      CommandParameter="https://terminalmacs.com/sponsorship-and-support"/>
-                <Metro:MetroMenuItem Header="{DynamicResource MainMenu_About}" 
+                <Metro:MetroMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_About}}" 
                                      Click="ShowAbout_Click"/>
             </Metro:MetroTitleMenuItem>
 
-            <Metro:MetroTitleMenuItem Header="{DynamicResource MainMenu_TechSupport}"  Icon="/Images/logo.png"
+            <Metro:MetroTitleMenuItem Header="{markup:I18n {x:Static i18NResources:Language.MainMenu_TechSupport}}"  Icon="/Images/logo.png"
                                       Command="AduOpenLink:ControlCommands.OpenLink"
                                       CommandParameter="https://terminalmacs.com/"/>
 

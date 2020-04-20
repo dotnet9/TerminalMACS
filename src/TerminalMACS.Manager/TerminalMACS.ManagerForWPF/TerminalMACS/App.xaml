@@ -5,8 +5,6 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="I18nResources/en.xaml"/>
-
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/BaseStyle.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/ShowControl.xaml"/>
                 <ResourceDictionary Source="pack://application:,,,/TerminalMACS;component/AduSkinStyle/Converter.xaml"/>

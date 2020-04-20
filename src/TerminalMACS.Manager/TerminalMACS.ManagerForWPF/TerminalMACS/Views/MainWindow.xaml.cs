@@ -1,6 +1,7 @@
 ﻿using AduSkin.Controls.Metro;
 using System.Windows;
 using TerminalMACS.Infrastructure.UI;
+using WpfExtensions.Xaml;
 
 namespace TerminalMACS.Views
 {

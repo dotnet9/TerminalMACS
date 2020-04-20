@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
+using WpfExtensions.Xaml;
 
 namespace TerminalMACS.Infrastructure.UI
 {
     public class LanguageHelper
     {
+        private static string _lastLanguage = "";
         private const string KEY_OF_LANGUAGE = "language";
         public static void SetLanguage(string language = "")
         {
@@ -18,23 +22,11 @@ namespace TerminalMACS.Infrastructure.UI
                 }
             }
 
-            string languagePath = $@"I18nResources\{language}.xaml";
-            try
-            {
-                var lanRd = Application.LoadComponent(new Uri(languagePath, UriKind.Relative)) as ResourceDictionary;
-                var old = Application.Current.Resources.MergedDictionaries.FirstOrDefault(o => o.Contains("AppTitle"));
-                if (old != null)
-                {
-                    Application.Current.Resources.MergedDictionaries.Remove(old);
-                }
-                Application.Current.Resources.MergedDictionaries.Add(lanRd);
-                ConfigHelper.SetKey(KEY_OF_LANGUAGE, language);
+            ConfigHelper.SetKey(KEY_OF_LANGUAGE, language);
+            _lastLanguage = language;
 
-                var culture = new System.Globalization.CultureInfo(language);
-                System.Globalization.CultureInfo.CurrentCulture = culture;
-                System.Globalization.CultureInfo.CurrentUICulture = culture;
-            }
-            catch { }
+            var culture = new System.Globalization.CultureInfo(language);
+            I18nManager.Instance.CurrentUICulture = culture;
         }
     }
 }

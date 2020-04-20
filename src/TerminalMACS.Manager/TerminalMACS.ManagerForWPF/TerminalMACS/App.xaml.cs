@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows;
 using TerminalMACS.Infrastructure.UI;
 using TerminalMACS.Views;
+using WpfExtensions.Xaml;
 
 namespace TerminalMACS
 {
@@ -15,6 +16,7 @@ namespace TerminalMACS
         }
         protected override Window CreateShell()
         {
+            I18nManager.Instance.Add(TerminalMACS.I18nResources.UiResource.ResourceManager);
             LanguageHelper.SetLanguage();
             return Container.Resolve<MainWindow>();
         }

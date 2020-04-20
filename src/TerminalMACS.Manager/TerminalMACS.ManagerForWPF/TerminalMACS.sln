@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Client", "Term
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Controls", "TerminalMACS.Controls\TerminalMACS.Controls.csproj", "{E0A72FB3-2AEE-473E-ACDD-B4120A424ABC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TerminalMACS.Infrastructure", "TerminalMACS.Infrastructure\TerminalMACS.Infrastructure.csproj", "{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TerminalMACS.Infrastructure", "TerminalMACS.Infrastructure\TerminalMACS.Infrastructure.csproj", "{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfExtensions.Xaml", "WpfExtensions.Xaml\WpfExtensions.Xaml.csproj", "{4D2CE44F-27EC-41E1-BA1A-718750B37704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3D0C928-C4E3-4AC2-B0FD-9E8A66C08272}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D2CE44F-27EC-41E1-BA1A-718750B37704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D2CE44F-27EC-41E1-BA1A-718750B37704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D2CE44F-27EC-41E1-BA1A-718750B37704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D2CE44F-27EC-41E1-BA1A-718750B37704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

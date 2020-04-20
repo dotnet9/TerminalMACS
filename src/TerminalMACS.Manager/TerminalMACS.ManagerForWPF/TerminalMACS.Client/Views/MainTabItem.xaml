@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:markup="clr-namespace:WpfExtensions.Xaml.Markup;assembly=WpfExtensions.Xaml"
+             xmlns:i18NResources="clr-namespace:TerminalMACS.Client.I18nResources"
              mc:Ignorable="d">
     <TabItem.Header>
         <Grid>
@@ -15,7 +17,7 @@
             <materialDesign:PackIcon Kind="Terminal" 
                                      Foreground="{StaticResource LightGreyBackgroundBrush}"
                                      HorizontalAlignment="Center" Height="22" Width="22"/>
-            <TextBlock Grid.Row="2" Text="Client" HorizontalAlignment="Center" 
+            <TextBlock Grid.Row="2" Text="{markup:I18n {x:Static i18NResources:Language.MainTabItm_Header}}" HorizontalAlignment="Center" 
                        Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10"/>
         </Grid>
     </TabItem.Header>

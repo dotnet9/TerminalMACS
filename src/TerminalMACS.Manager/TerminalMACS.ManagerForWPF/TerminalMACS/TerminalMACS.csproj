@@ -5,7 +5,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AppendTargetFrameworkToOutputPath>Flase</AppendTargetFrameworkToOutputPath>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Images\logo.ico</ApplicationIcon>
+    <ApplicationIcon>Images\logo2.ico</ApplicationIcon>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.1.0</FileVersion>
     <Version>0.0.1</Version>
@@ -26,31 +26,22 @@
     <None Remove="Images\about.png" />
     <None Remove="Images\code.png" />
     <None Remove="Images\Contact.png" />
-    <None Remove="Images\logo.ico" />
     <None Remove="Images\logo.png" />
+    <None Remove="Images\logo2.ico" />
+    <None Remove="Images\logo2.png" />
     <None Remove="Images\mynewwechat.jpg" />
     <None Remove="Images\setting.png" />
     <None Remove="Images\WeChat-public-address.jpg" />
+    <None Remove="Images\WeChat_UIDesigner.jpg" />
+    <None Include="I18nResources\Language.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.tt</DependentUpon>
+    </None>
     <None Include="Images\logo.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Page Remove="I18nResources\ja.xaml" />
-    <Page Remove="I18nResources\zh-CN.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="I18nResources\ja.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="I18nResources\zh-CN.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -61,17 +52,20 @@
     <ProjectReference Include="..\AduSkin\AduSkin.csproj" />
     <ProjectReference Include="..\TerminalMACS.Controls\TerminalMACS.Controls.csproj" />
     <ProjectReference Include="..\TerminalMACS.Infrastructure.UI\TerminalMACS.Infrastructure.UI.csproj" />
+    <ProjectReference Include="..\WpfExtensions.Xaml\WpfExtensions.Xaml.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\about.png" />
     <Resource Include="Images\code.png" />
     <Resource Include="Images\Contact.png" />
-    <Resource Include="Images\logo.ico" />
+    <Resource Include="Images\logo2.ico" />
     <Resource Include="Images\logo.png" />
+    <Resource Include="Images\logo2.png" />
     <Resource Include="Images\mynewwechat.jpg" />
     <Resource Include="Images\setting.png" />
     <Resource Include="Images\WeChat-public-address.jpg" />
+    <Resource Include="Images\WeChat_UIDesigner.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -79,9 +73,30 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="I18nResources\en.xaml">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Page>
+    <Compile Update="I18nResources\Language.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Language.tt</DependentUpon>
+    </Compile>
+    <Compile Update="I18nResources\UiResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UiResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="I18nResources\UiResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UiResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="I18nResources\Language.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Language.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
