@@ -61,11 +61,92 @@ namespace TerminalMACS.Home.I18nResources {
         }
         
         /// <summary>
+        ///   查找类似 Timeline 的本地化字符串。
+        /// </summary>
+        internal static string MainTabItem_Timeline {
+            get {
+                return ResourceManager.GetString("MainTabItem_Timeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Home 的本地化字符串。
         /// </summary>
         internal static string MainTabItm_Header {
             get {
                 return ResourceManager.GetString("MainTabItm_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Pre knowledge preparation, add ABP vNext basic service project 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_AddAbpVNextSeverProject {
+            get {
+                return ResourceManager.GetString("Timeline_AddAbpVNextSeverProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Add empty client project 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_AddEmptyClientApp {
+            get {
+                return ResourceManager.GetString("Timeline_AddEmptyClientApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Confirm that the server adopts ABP vNext recommendation and adds WPF project 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_AddWPFManagerProject {
+            get {
+                return ResourceManager.GetString("Timeline_AddWPFManagerProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Basic information acquisition of mobile client 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_ClientAppBaseInfo {
+            get {
+                return ResourceManager.GetString("Timeline_ClientAppBaseInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Mobile client completes address book data reading 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_ClientAppCompleteContactRead {
+            get {
+                return ResourceManager.GetString("Timeline_ClientAppCompleteContactRead", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 The first version of mobile client comes to an end, and other process modules are developed 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_ClientAppVersion1 {
+            get {
+                return ResourceManager.GetString("Timeline_ClientAppVersion1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Initiallize project 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_InitializeProject {
+            get {
+                return ResourceManager.GetString("Timeline_InitializeProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Build the first version of WPF management end, realize dynamic change of theme color, internationalization, localization and prism modularization 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_WPFManagerStructureOver {
+            get {
+                return ResourceManager.GetString("Timeline_WPFManagerStructureOver", resourceCulture);
             }
         }
     }

@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainTabItem_Timeline" xml:space="preserve">
+    <value>时间轴</value>
+  </data>
   <data name="MainTabItm_Header" xml:space="preserve">
     <value>首页</value>
+  </data>
+  <data name="Timeline_AddAbpVNextSeverProject" xml:space="preserve">
+    <value>前期知识准备，添加Abp vNext基础服务工程</value>
+  </data>
+  <data name="Timeline_AddEmptyClientApp" xml:space="preserve">
+    <value>添加空移动端客户端工程</value>
+  </data>
+  <data name="Timeline_AddWPFManagerProject" xml:space="preserve">
+    <value>确定服务端采用Abp vNext搭建，添加WPF工程</value>
+  </data>
+  <data name="Timeline_ClientAppBaseInfo" xml:space="preserve">
+    <value>移动客户端基本信息获取</value>
+  </data>
+  <data name="Timeline_ClientAppCompleteContactRead" xml:space="preserve">
+    <value>移动客户端完成通讯录数据读取</value>
+  </data>
+  <data name="Timeline_ClientAppVersion1" xml:space="preserve">
+    <value>移动客户端第一版告一段落，开发其他进程模块</value>
+  </data>
+  <data name="Timeline_InitializeProject" xml:space="preserve">
+    <value>初始化项目</value>
+  </data>
+  <data name="Timeline_WPFManagerStructureOver" xml:space="preserve">
+    <value>搭建WPF管理端初版，实现动态更改主题色、国际化、本地化、Prism模块化</value>
   </data>
 </root>

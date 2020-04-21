@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainTabItem_Timeline" xml:space="preserve">
+    <value>時間軸</value>
+  </data>
   <data name="MainTabItm_Header" xml:space="preserve">
     <value>最初のページ</value>
+  </data>
+  <data name="Timeline_AddAbpVNextSeverProject" xml:space="preserve">
+    <value>前期知識準備、Abp vNext基礎サービスプロジェクトを追加します。</value>
+  </data>
+  <data name="Timeline_AddEmptyClientApp" xml:space="preserve">
+    <value>空の移動クライアントプロジェクトを追加</value>
+  </data>
+  <data name="Timeline_AddWPFManagerProject" xml:space="preserve">
+    <value>サービスがAbp vNextを採用することを確定し、WPFプロジェクトを追加する。</value>
+  </data>
+  <data name="Timeline_ClientAppBaseInfo" xml:space="preserve">
+    <value>モバイルクライアント基本情報取得</value>
+  </data>
+  <data name="Timeline_ClientAppCompleteContactRead" xml:space="preserve">
+    <value>モバイルクライアントがアドレス帳データの読み込みを完了しました。</value>
+  </data>
+  <data name="Timeline_ClientAppVersion1" xml:space="preserve">
+    <value>モバイルクライアントの第一版が一段落しました。他のプロセスモジュールを開発します。</value>
+  </data>
+  <data name="Timeline_InitializeProject" xml:space="preserve">
+    <value>初期化項目</value>
+  </data>
+  <data name="Timeline_WPFManagerStructureOver" xml:space="preserve">
+    <value>WPF管理端末の初版を構築し、テーマ色、国際化、ローカライズ、Prismモジュール化を動的に変更する。</value>
   </data>
 </root>

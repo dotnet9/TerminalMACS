@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
              xmlns:markup="clr-namespace:WpfExtensions.Xaml.Markup;assembly=WpfExtensions.Xaml"
              xmlns:i18NResources="clr-namespace:TerminalMACS.Home.I18nResources"
+             xmlns:child="clr-namespace:TerminalMACS.Home.Views.ChildTabItem"
              mc:Ignorable="d">
     <TabItem.Header>
         <Grid>
@@ -22,5 +24,16 @@
                        Foreground="{StaticResource LightGreyBackgroundBrush}" FontSize="10"/>
         </Grid>
     </TabItem.Header>
-    <Grid Background="Red"/>
+    <Grid>
+        <Metro:AduTabControl Background="#FFF">
+            <Metro:AduTabControl.Resources>
+                <Style TargetType="TabPanel">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </Metro:AduTabControl.Resources>
+            <Metro:AduTabItem Header="{markup:I18n {x:Static i18NResources:Language.MainTabItem_Timeline}}">
+                <child:TerminalMACSTimeLine/>
+            </Metro:AduTabItem>
+        </Metro:AduTabControl>
+    </Grid>
 </TabItem>

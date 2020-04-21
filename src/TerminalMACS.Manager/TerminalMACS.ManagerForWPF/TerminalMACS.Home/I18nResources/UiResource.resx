@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainTabItem_Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
   <data name="MainTabItm_Header" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Timeline_AddAbpVNextSeverProject" xml:space="preserve">
+    <value>Pre knowledge preparation, add ABP vNext basic service project</value>
+  </data>
+  <data name="Timeline_AddEmptyClientApp" xml:space="preserve">
+    <value>Add empty client project</value>
+  </data>
+  <data name="Timeline_AddWPFManagerProject" xml:space="preserve">
+    <value>Confirm that the server adopts ABP vNext recommendation and adds WPF project</value>
+  </data>
+  <data name="Timeline_ClientAppBaseInfo" xml:space="preserve">
+    <value>Basic information acquisition of mobile client</value>
+  </data>
+  <data name="Timeline_ClientAppCompleteContactRead" xml:space="preserve">
+    <value>Mobile client completes address book data reading</value>
+  </data>
+  <data name="Timeline_ClientAppVersion1" xml:space="preserve">
+    <value>The first version of mobile client comes to an end, and other process modules are developed</value>
+  </data>
+  <data name="Timeline_InitializeProject" xml:space="preserve">
+    <value>Initiallize project</value>
+  </data>
+  <data name="Timeline_WPFManagerStructureOver" xml:space="preserve">
+    <value>Build the first version of WPF management end, realize dynamic change of theme color, internationalization, localization and prism modularization</value>
   </data>
 </root>
