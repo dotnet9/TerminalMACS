@@ -1,4 +1,5 @@
 ﻿using Prism.Ioc;
+using Prism.Modularity;
 using Prism.Regions;
 using TerminalMACS.Home.Views;
 using TerminalMACS.Infrastructure.UI;
@@ -8,6 +9,7 @@ using WpfExtensions.Xaml;
 
 namespace TerminalMACS.Home
 {
+    [Module(ModuleName = ModuleNames.HOME)]
     public class HomeModule : ModuleBase
     {
         private readonly IRegionManager _regionManager;

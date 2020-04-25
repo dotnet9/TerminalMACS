@@ -16,4 +16,11 @@ namespace TerminalMACS.Infrastructure.UI
         /// </summary>
         public const string SettingsTabRegion = "SettingsTabRegion";
     }
+
+    public static class ModuleNames
+    {
+        public const string HOME = "Home";
+        public const string Server = "Server";
+        public const string Client = "Client";
+    }
 }

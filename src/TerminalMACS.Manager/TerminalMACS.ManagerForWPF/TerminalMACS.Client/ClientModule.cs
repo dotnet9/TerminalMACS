@@ -1,5 +1,7 @@
 ﻿using Prism.Ioc;
+using Prism.Modularity;
 using Prism.Regions;
+using System;
 using TerminalMACS.Client.Views;
 using TerminalMACS.Infrastructure.UI;
 using TerminalMACS.Infrastructure.UI.Modularity;
@@ -8,6 +10,9 @@ using WpfExtensions.Xaml;
 
 namespace TerminalMACS.Client
 {
+    [ModuleDependency(ModuleNames.HOME)]
+    [ModuleDependency(ModuleNames.Server)]
+    [Module(ModuleName = ModuleNames.Client)]
     public class ClientModule : ModuleBase
     {
         private readonly IRegionManager _regionManager;
