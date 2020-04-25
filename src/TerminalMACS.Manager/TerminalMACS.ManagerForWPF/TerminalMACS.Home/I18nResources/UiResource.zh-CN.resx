@@ -129,6 +129,9 @@
   <data name="Timeline_AddEmptyClientApp" xml:space="preserve">
     <value>添加空移动端客户端工程</value>
   </data>
+  <data name="Timeline_AddNotifyIcon" xml:space="preserve">
+    <value>添加托盘图标</value>
+  </data>
   <data name="Timeline_AddWPFManagerProject" xml:space="preserve">
     <value>确定服务端采用Abp vNext搭建，添加WPF工程</value>
   </data>

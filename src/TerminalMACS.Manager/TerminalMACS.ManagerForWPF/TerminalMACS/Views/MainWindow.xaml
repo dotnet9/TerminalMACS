@@ -5,6 +5,7 @@
                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                    xmlns:Metro="clr-namespace:AduSkin.Controls.Metro;assembly=AduSkin"
+                   xmlns:hc="https://handyorg.github.io/handycontrol"
                    xmlns:AduOpenLink="clr-namespace:AduSkin.Interactivity;assembly=AduSkin"
                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
                    xmlns:ui="clr-namespace:TerminalMACS.Infrastructure.UI;assembly=TerminalMACS.Infrastructure.UI"
@@ -85,6 +86,23 @@
             <ColumnDefinition Width="68"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+
+        <hc:NotifyIcon x:Name="NotifyIconContextContent" 
+                   Text="{markup:I18n {x:Static i18NResources:Language.AppTitle}}"
+                   Visibility="Visible"
+                   Icon="/Images/logo.ico">
+            <hc:NotifyIcon.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Command="hc:ControlCommands.PushMainWindow2Top" Header="{markup:I18n {x:Static i18NResources:Language.PushMainWindow2Top}}"/>
+                    <MenuItem Command="hc:ControlCommands.ShutdownApp" Header="{markup:I18n {x:Static i18NResources:Language.Exit}}"/>
+                </ContextMenu>
+            </hc:NotifyIcon.ContextMenu>
+            <hc:Interaction.Triggers>
+                <hc:EventTrigger EventName="Click">
+                    <hc:EventToCommand Command="hc:ControlCommands.PushMainWindow2Top"/>
+                </hc:EventTrigger>
+            </hc:Interaction.Triggers>
+        </hc:NotifyIcon>
 
         <Rectangle Fill="{StaticResource PrimaryHueDarkBrush}"/>
 

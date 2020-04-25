@@ -23,6 +23,7 @@ namespace TerminalMACS.I18nResources
 		public static readonly ComponentResourceKey About_TechExchange = new ComponentResourceKey(typeof(UiResource), nameof(About_TechExchange));
 		public static readonly ComponentResourceKey About_Thanks = new ComponentResourceKey(typeof(UiResource), nameof(About_Thanks));
 		public static readonly ComponentResourceKey AppTitle = new ComponentResourceKey(typeof(UiResource), nameof(AppTitle));
+		public static readonly ComponentResourceKey Exit = new ComponentResourceKey(typeof(UiResource), nameof(Exit));
 		public static readonly ComponentResourceKey MainMenu_About = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_About));
 		public static readonly ComponentResourceKey MainMenu_CNBlogs = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_CNBlogs));
 		public static readonly ComponentResourceKey MainMenu_Contact = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_Contact));
@@ -35,5 +36,6 @@ namespace TerminalMACS.I18nResources
 		public static readonly ComponentResourceKey MainMenu_TechSupport = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_TechSupport));
 		public static readonly ComponentResourceKey MainMenu_ThemeColor = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_ThemeColor));
 		public static readonly ComponentResourceKey MainMenu_TouTiao = new ComponentResourceKey(typeof(UiResource), nameof(MainMenu_TouTiao));
+		public static readonly ComponentResourceKey PushMainWindow2Top = new ComponentResourceKey(typeof(UiResource), nameof(PushMainWindow2Top));
 	}
 }

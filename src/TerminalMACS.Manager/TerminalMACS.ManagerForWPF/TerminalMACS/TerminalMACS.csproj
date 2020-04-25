@@ -26,6 +26,7 @@
     <None Remove="Images\about.png" />
     <None Remove="Images\code.png" />
     <None Remove="Images\Contact.png" />
+    <None Remove="Images\logo.ico" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\logo2.ico" />
     <None Remove="Images\logo2.png" />
@@ -45,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="HandyControl" Version="2.4.0" />
     <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
   </ItemGroup>
 
@@ -59,6 +61,7 @@
     <Resource Include="Images\about.png" />
     <Resource Include="Images\code.png" />
     <Resource Include="Images\Contact.png" />
+    <Resource Include="Images\logo.ico" />
     <Resource Include="Images\logo2.ico" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\logo2.png" />

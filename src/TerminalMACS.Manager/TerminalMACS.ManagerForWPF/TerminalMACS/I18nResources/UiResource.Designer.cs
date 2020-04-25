@@ -142,6 +142,15 @@ namespace TerminalMACS.I18nResources {
         }
         
         /// <summary>
+        ///   查找类似 Exit application 的本地化字符串。
+        /// </summary>
+        public static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 About 的本地化字符串。
         /// </summary>
         public static string MainMenu_About {
@@ -246,6 +255,15 @@ namespace TerminalMACS.I18nResources {
         public static string MainMenu_TouTiao {
             get {
                 return ResourceManager.GetString("MainMenu_TouTiao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 Open main window 的本地化字符串。
+        /// </summary>
+        public static string PushMainWindow2Top {
+            get {
+                return ResourceManager.GetString("PushMainWindow2Top", resourceCulture);
             }
         }
     }

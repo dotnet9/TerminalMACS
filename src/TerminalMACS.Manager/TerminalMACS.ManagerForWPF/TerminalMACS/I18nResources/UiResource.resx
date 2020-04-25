@@ -144,6 +144,9 @@
   <data name="AppTitle" xml:space="preserve">
     <value>Terminal management and check system</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit application</value>
+  </data>
   <data name="MainMenu_About" xml:space="preserve">
     <value>About</value>
   </data>
@@ -179,5 +182,8 @@
   </data>
   <data name="MainMenu_TouTiao" xml:space="preserve">
     <value>Tou Tiao</value>
+  </data>
+  <data name="PushMainWindow2Top" xml:space="preserve">
+    <value>Open main window</value>
   </data>
 </root>

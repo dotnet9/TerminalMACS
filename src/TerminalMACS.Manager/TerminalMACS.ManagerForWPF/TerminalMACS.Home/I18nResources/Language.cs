@@ -18,6 +18,7 @@ namespace TerminalMACS.Home.I18nResources
 		public static readonly ComponentResourceKey MainTabItm_Header = new ComponentResourceKey(typeof(UiResource), nameof(MainTabItm_Header));
 		public static readonly ComponentResourceKey Timeline_AddAbpVNextSeverProject = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_AddAbpVNextSeverProject));
 		public static readonly ComponentResourceKey Timeline_AddEmptyClientApp = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_AddEmptyClientApp));
+		public static readonly ComponentResourceKey Timeline_AddNotifyIcon = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_AddNotifyIcon));
 		public static readonly ComponentResourceKey Timeline_AddWPFManagerProject = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_AddWPFManagerProject));
 		public static readonly ComponentResourceKey Timeline_ClientAppBaseInfo = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_ClientAppBaseInfo));
 		public static readonly ComponentResourceKey Timeline_ClientAppCompleteContactRead = new ComponentResourceKey(typeof(UiResource), nameof(Timeline_ClientAppCompleteContactRead));

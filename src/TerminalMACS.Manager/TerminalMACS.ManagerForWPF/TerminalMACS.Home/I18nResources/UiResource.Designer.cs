@@ -97,6 +97,15 @@ namespace TerminalMACS.Home.I18nResources {
         }
         
         /// <summary>
+        ///   查找类似 Add NotifyIcon 的本地化字符串。
+        /// </summary>
+        internal static string Timeline_AddNotifyIcon {
+            get {
+                return ResourceManager.GetString("Timeline_AddNotifyIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 Confirm that the server adopts ABP vNext recommendation and adds WPF project 的本地化字符串。
         /// </summary>
         internal static string Timeline_AddWPFManagerProject {

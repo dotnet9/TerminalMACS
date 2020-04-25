@@ -13,6 +13,7 @@ namespace TerminalMACS.Home.Views.ChildTabItem
 
             #region timeline
             ObservableCollection<Tuple<int, string, string>> listTimeLine = new ObservableCollection<Tuple<int, string, string>>();
+            listTimeLine.Add(new Tuple<int, string, string>(7, "2020-04-25", I18nManager.Instance.Get(I18nResources.Language.Timeline_AddNotifyIcon).ToString()));
             listTimeLine.Add(new Tuple<int, string, string>(7, "2020-04-20", I18nManager.Instance.Get(I18nResources.Language.Timeline_WPFManagerStructureOver).ToString()));
             listTimeLine.Add(new Tuple<int, string, string>(6, "2020-04-14", I18nManager.Instance.Get(I18nResources.Language.Timeline_AddWPFManagerProject).ToString()));
             listTimeLine.Add(new Tuple<int, string, string>(5, "2020-04-13", I18nManager.Instance.Get(I18nResources.Language.Timeline_AddAbpVNextSeverProject).ToString()));
