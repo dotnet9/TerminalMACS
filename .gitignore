@@ -33,3 +33,4 @@ src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Server/bin
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/TerminalMACS.Server/obj
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/WpfExtensions.Xaml/bin
 src/TerminalMACS.Manager/TerminalMACS.ManagerForWPF/WpfExtensions.Xaml/obj
+src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.EntityFrameworkCore.DbMigrations/Migrations

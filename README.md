@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://terminalmacs.com">
-    <img src="./docs/imgs/logo.png">
+    <img width="80px" src="./docs/imgs/logo.png">
   </a>
 </p>
 
