@@ -125,6 +125,8 @@ namespace TerminalMACS.Server
                         .AllowCredentials();
                 });
             });
+
+            
         }
         
         public override void OnApplicationInitialization(ApplicationInitializationContext context)

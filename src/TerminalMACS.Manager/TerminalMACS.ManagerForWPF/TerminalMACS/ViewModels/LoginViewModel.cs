@@ -1,4 +1,5 @@
 ﻿using Prism.Mvvm;
+using WpfExtensions.Xaml;
 
 namespace TerminalMACS.ViewModels
 {
@@ -19,7 +20,7 @@ namespace TerminalMACS.ViewModels
 
         public LoginViewModel()
         {
-            this.Title = App.Current.FindResource("AppTitle").ToString();
+            this.Title = I18nManager.Instance.Get(I18nResources.Language.AppTitle).ToString();
         }
     }
 }

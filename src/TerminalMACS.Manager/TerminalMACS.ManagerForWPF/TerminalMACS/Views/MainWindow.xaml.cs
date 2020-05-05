@@ -40,5 +40,12 @@ namespace TerminalMACS.Views
             this.Hide();
             e.Cancel = true;
         }
+
+        private void ShowLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login login = new Login();
+            login.Owner = this;
+            login.ShowDialog();
+        }
     }
 }

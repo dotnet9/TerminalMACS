@@ -34,4 +34,6 @@
     <ProjectReference Include="..\TerminalMACS.Server.EntityFrameworkCore.DbMigrations\TerminalMACS.Server.EntityFrameworkCore.DbMigrations.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>
