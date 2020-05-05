@@ -47,6 +47,12 @@ Empty
 
 - Install [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) 3.1.201 or later
 
+- TerminalMACS.Server.IdentityServer
+```bash
+$ yarn
+$ gulp
+```
+
 ## 🔨 Local Development
 
 Empty

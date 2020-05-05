@@ -37,3 +37,4 @@ src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.EntityFrameworkCore.
 src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.IdentityServer/.vscode
 src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.IdentityServer/wwwroot/libs
 src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.IdentityServer/package-lock.jso
+src/TerminalMACS.Server/aspnet-core/src/TerminalMACS.Server.IdentityServer/yarn.lock

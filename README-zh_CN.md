@@ -47,6 +47,12 @@
 
 - 先安装 [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1) 3.1.201 以上版本
 
+- TerminalMACS.Server.IdentityServer
+```bash
+$ yarn
+$ gulp
+```
+
 ## 🔨 本地开发
 
 空
