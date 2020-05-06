@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://terminalmacs.com">
+  <a href="https://dotnet9.com">
     <img width="80px" src="./docs/imgs/logo.png">
   </a>
 </p>
@@ -59,8 +59,7 @@ $ gulp
 
 ## 🔗 链接
 
-- [官方网站](https://terminalmacs.com)
-- [合作网站](https://dotnet9.com)
+- [官方网站](https://dotnet9.com)
 
 ## 🗺 开发进度
 
@@ -73,7 +72,7 @@ $ gulp
 
 ## 🤝 如何贡献
 
-项目刚启动不久，可在 [Github](https://github.com/dotnet9/TerminalMACS/issues)、[官方网站](https://terminalmacs.com)、[合作网站](https://dotnet9.com) 留言。
+项目刚启动不久，可在 [Github](https://github.com/dotnet9/TerminalMACS/issues)、[Gitee](https://gitee.com/dotnet9/TerminalMACS)、[官方网站](https://dotnet9.com/questions-and-answers/terminalmacs) 留言。
 
 ## 💕 支持本项目
 
@@ -83,7 +82,7 @@ $ gulp
 - [微信](https://img.dotnet9.com/dotnet9_wechatpay.png)
 - [支付宝](https://img.dotnet9.com/dotnet9_alipay.jpg)
 
-我会把详细的捐赠记录登记在 [捐赠者名单](https://terminalmacs.com/sponsorship-and-support)。
+我会把详细的捐赠记录登记在 [捐赠者名单](https://dotnet9.com/745.html)。
 
 ## ❓ 社区互助
 

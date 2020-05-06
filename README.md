@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://terminalmacs.com">
+  <a href="https://dotnet9.com">
     <img width="80px" src="./docs/imgs/logo.png">
   </a>
 </p>
@@ -59,8 +59,7 @@ Empty
 
 ## 🔗 Links
 
-- [Official website](https://terminalmacs.com)
-- [Cooperation website](https://dotnet9.com)
+- [Official website](https://dotnet9.com)
 
 ## 🗺 Development schedule
 
@@ -75,8 +74,8 @@ Empty
 
 Shortly after the start of the project, you can leave a message at:
 - [GitHub](https://github.com/dotnet9/TerminalMACS/issues)
-- [Official website](https://terminalmacs.com)
-- [Cooperation website](https://dotnet9.com).
+- [Gitee](https://gitee.com/dotnet9/TerminalMACS)
+- [Official website](https://dotnet9.com/questions-and-answers/terminalmacs)
 
 ## 💕 Donation
 
@@ -86,7 +85,7 @@ This project is an MIT-licensed open source project. In order to achieve better 
 - [Wechat](https://img.dotnet9.com/dotnet9_wechatpay.png)
 - [Alipay](https://img.dotnet9.com/dotnet9_alipay.jpg)
 
-I will put the detailed donation records on the [backer list](https://terminalmacs.com/sponsorship-and-support).
+I will put the detailed donation records on the [backer list](https://dotnet9.com/745.html).
 
 ## ❓ Community Support
 
