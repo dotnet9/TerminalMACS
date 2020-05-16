@@ -1,0 +1,1 @@
+﻿Run IdentityServer fail, perhaps missing some files, see the article:https://dotnet9.com/12706.html
