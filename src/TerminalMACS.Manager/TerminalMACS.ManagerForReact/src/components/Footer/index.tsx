@@ -8,20 +8,20 @@ export default () => (
     links={[
       {
         key: 'Ant Design Pro',
-        title: 'Ant Design Pro',
-        href: 'https://pro.ant.design',
+        title: 'Dotnet9',
+        href: 'https://dotnet9.com',
         blankTarget: true,
       },
       {
         key: 'github',
         title: <GithubOutlined />,
-        href: 'https://github.com/ant-design/ant-design-pro',
+        href: 'https://github.com/dotnet9',
         blankTarget: true,
       },
       {
         key: 'Ant Design',
-        title: 'Ant Design',
-        href: 'https://ant.design',
+        title: 'TerminalMACS',
+        href: 'https://github.com/dotnet9/TerminalMACS',
         blankTarget: true,
       },
     ]}
