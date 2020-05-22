@@ -1,0 +1,85 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+@ptcWidth: 250px;
+@btnAreaHeight: 50px;
+@videoPanelMargin: 5px;
+
+.main_child {
+  display: flex;
+  height: 100%;
+}
+
+.left {
+  width: @ptcWidth;
+  height: 100%;
+  background: green;
+}
+
+.left_top {
+  width: 100%;
+  height: @ptcWidth;
+  background: orange;
+}
+
+.left_bottom {
+  width: 100%;
+  height: calc(100% - @ptcWidth);
+  background: #ccc;
+}
+
+.right {
+  width: calc(100% - @ptcWidth);
+  height: 100%;
+  background: #f60;
+}
+
+.right_top {
+  width: 100%;
+  height: calc(100% - @btnAreaHeight);
+  background: blue;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right_bottom {
+  width: 100%;
+  height: @btnAreaHeight;
+  background: #f90;
+}
+
+.control_Button {
+  margin: 2px;
+}
+
+.video_panel(@count) {
+  width: calc(100% / @count - @videoPanelMargin * 2);
+  height: calc(100% / @count - @videoPanelMargin * 2);
+  margin: @videoPanelMargin;
+}
+
+// 1*1
+.video_panel1 {
+  .video_panel(1);
+}
+
+// 2*2
+.video_panel2 {
+  .video_panel(2);
+}
+
+// 3*3
+.video_panel3 {
+  .video_panel(3);
+}
+
+// 4*4
+.video_panel4 {
+  .video_panel(4);
+}

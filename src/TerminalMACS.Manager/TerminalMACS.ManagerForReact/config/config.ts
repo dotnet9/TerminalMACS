@@ -2,9 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-
 const { REACT_APP_ENV } = process.env;
-
 export default defineConfig({
   hash: true,
   antd: {},
@@ -41,7 +39,6 @@ export default defineConfig({
         },
       ],
     },
-
     {
       path: '/welcome',
       name: 'welcome',
@@ -72,6 +69,12 @@ export default defineConfig({
     {
       path: '/',
       redirect: '/welcome',
+    },
+    {
+      name: 'grid.dynamic-grid',
+      icon: 'smile',
+      path: '/grid/dynamicgrid',
+      component: './Grid/DynamicGridPage',
     },
     {
       component: './404',
