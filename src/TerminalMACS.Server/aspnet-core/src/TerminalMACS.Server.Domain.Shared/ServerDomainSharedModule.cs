@@ -39,6 +39,8 @@ namespace TerminalMACS.Server
                     .Add<ServerResource>("en")
                     .AddBaseTypes(typeof(AbpValidationResource))
                     .AddVirtualJson("/Localization/Server");
+                
+                options.DefaultResourceType = typeof(ServerResource);
             });
         }
     }

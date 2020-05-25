@@ -12,6 +12,7 @@
     <OutputPath>..\Build\Release\Modules</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AduSkin" Version="1.1.1.6" />
     <PackageReference Include="MaterialDesignColors" Version="1.2.4-ci1300" />
     <PackageReference Include="MaterialDesignThemes" Version="3.1.1-ci1300" />
     <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
@@ -27,7 +28,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AduSkin\AduSkin.csproj" />
     <ProjectReference Include="..\TerminalMACS.Infrastructure.UI\TerminalMACS.Infrastructure.UI.csproj" />
     <ProjectReference Include="..\WpfExtensions.Xaml\WpfExtensions.Xaml.csproj" />
   </ItemGroup>

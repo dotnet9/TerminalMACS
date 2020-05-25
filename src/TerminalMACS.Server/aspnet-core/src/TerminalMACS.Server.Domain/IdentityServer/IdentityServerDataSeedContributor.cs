@@ -1,8 +1,8 @@
-﻿using IdentityServer4.Models;
-using Microsoft.Extensions.Configuration;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using IdentityServer4.Models;
+using Microsoft.Extensions.Configuration;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
@@ -133,8 +133,7 @@ namespace TerminalMACS.Server.IdentityServer
                     consoleClientId,
                     commonScopes,
                     new[] { "password", "client_credentials" },
-                    (configurationSection["Server_App:ClientSecret"] ?? "1q2w3e*").Sha256(),
-                    "http://localhost/sample-wpf-app"
+                    (configurationSection["Server_App:ClientSecret"] ?? "1q2w3e*").Sha256()
                 );
             }
         }
