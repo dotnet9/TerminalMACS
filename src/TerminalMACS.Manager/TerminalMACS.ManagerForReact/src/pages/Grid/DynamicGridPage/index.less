@@ -1,57 +1,25 @@
 @import '~antd/es/style/themes/default.less';
 
-.main {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: red;
-}
-
 @ptcWidth: 250px;
 @btnAreaHeight: 50px;
 @videoPanelMargin: 5px;
+@cardTitleHeight: 30px;
 
-.main_child {
-  display: flex;
-  height: 100%;
-}
-
-.left {
-  width: @ptcWidth;
-  height: 100%;
-  background: green;
-}
-
-.left_top {
+.main {
   width: 100%;
-  height: @ptcWidth;
-  background: orange;
-}
-
-.left_bottom {
-  width: 100%;
-  height: calc(100% - @ptcWidth);
-  background: #ccc;
-}
-
-.right {
-  width: calc(100% - @ptcWidth);
   height: 100%;
-  background: #f60;
 }
 
-.right_top {
+.top {
   width: 100%;
   height: calc(100% - @btnAreaHeight);
-  background: blue;
   display: flex;
   flex-wrap: wrap;
 }
 
-.right_bottom {
+.bottom {
   width: 100%;
   height: @btnAreaHeight;
-  background: #f90;
 }
 
 .control_Button {
@@ -59,9 +27,54 @@
 }
 
 .video_panel(@count) {
-  width: calc(100% / @count - @videoPanelMargin * 2);
-  height: calc(100% / @count - @videoPanelMargin * 2);
+  width: calc(100% / @count - @videoPanelMargin * 4);
+  height: calc(100% / @count - @videoPanelMargin * 4);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin: @videoPanelMargin;
+  position: relative;
+
+  .cardCheckHelp {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .cardtitle {
+    padding:@videoPanelMargin;
+    height: @cardTitleHeight;
+    background: #0EB7A7;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  iframe {
+    width: 100%;
+    height: calc(100% - @cardTitleHeight);
+    background: black;
+  }
+
+  .cardHoverMenu {
+    width: 100%;
+    background: #ccc;
+    margin-top: -35px;
+    padding-left: 20px;
+    display: none;
+
+    Button {
+      margin-right: calc(@videoPanelMargin * 2);
+    }
+  }
+
+  .cardHoverMenuShow {
+    display: block;
+  }
+}
+
+.video_panel_click {  
+  border: 2px solid darkorange;
 }
 
 // 1*1
