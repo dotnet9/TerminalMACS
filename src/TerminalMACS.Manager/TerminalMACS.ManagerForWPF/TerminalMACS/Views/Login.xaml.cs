@@ -32,8 +32,8 @@ namespace TerminalMACS.Views
                 Scope = "openid",
                 ClientSecret = "1q2w3e*",
                 RedirectUri = "http://localhost/sample-wpf-app",//"https://localhost:44387/connect/token",
-                ResponseMode = OidcClientOptions.AuthorizeResponseMode.FormPost,
-                Flow = OidcClientOptions.AuthenticationFlow.AuthorizationCode,
+                //ResponseMode = OidcClientOptions.AuthorizeResponseMode.FormPost,
+                //Flow = OidcClientOptions.AuthenticationFlow.AuthorizationCode,
                 Browser = new WpfEmbeddedBrowser()
             };
 

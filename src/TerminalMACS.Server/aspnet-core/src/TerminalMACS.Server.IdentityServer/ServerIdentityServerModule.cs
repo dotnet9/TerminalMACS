@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using Localization.Resources.AbpUi;
@@ -95,18 +95,18 @@ namespace TerminalMACS.Server
                 options.KeyPrefix = "Server:";
             });
 
-            //context.Services.AddStackExchangeRedisCache(options =>
-            //{
-            //    options.Configuration = configuration["Redis:Configuration"];
-            //});
+            context.Services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = configuration["Redis:Configuration"];
+            });
 
-            //if (!hostingEnvironment.IsDevelopment())
-            //{
-            //    var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
-            //    context.Services
-            //        .AddDataProtection()
-            //        .PersistKeysToStackExchangeRedis(redis, "Server-Protection-Keys");
-            //}
+            if (!hostingEnvironment.IsDevelopment())
+            {
+                var redis = ConnectionMultiplexer.Connect(configuration["Redis:Configuration"]);
+                context.Services
+                    .AddDataProtection()
+                    .PersistKeysToStackExchangeRedis(redis, "Server-Protection-Keys");
+            }
 
             context.Services.AddCors(options =>
             {
@@ -126,10 +126,8 @@ namespace TerminalMACS.Server
                         .AllowCredentials();
                 });
             });
-
-            
         }
-        
+
         public override void OnApplicationInitialization(ApplicationInitializationContext context)
         {
             var app = context.GetApplicationBuilder();
@@ -149,16 +147,18 @@ namespace TerminalMACS.Server
             app.UseRouting();
             app.UseCors(DefaultCorsPolicyName);
             app.UseAuthentication();
+
             if (MultiTenancyConsts.IsEnabled)
             {
                 app.UseMultiTenancy();
             }
+            
+            app.UseAbpRequestLocalization();
             app.UseIdentityServer();
             app.UseAuthorization();
-            app.UseAbpRequestLocalization();
             app.UseAuditing();
             app.UseAbpSerilogEnrichers();
-            app.UseMvcWithDefaultRouteAndArea();
+            app.UseConfiguredEndpoints();
         }
     }
 }

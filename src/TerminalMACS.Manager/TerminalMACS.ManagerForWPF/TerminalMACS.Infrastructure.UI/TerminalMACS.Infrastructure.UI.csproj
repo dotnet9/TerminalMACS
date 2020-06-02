@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
-    <PackageReference Include="Prism.Wpf" Version="7.2.0.1422" />
+    <PackageReference Include="Prism.Unity" Version="8.0.0.1740-pre" />
+    <PackageReference Include="Prism.Wpf" Version="8.0.0.1740-pre" />
   </ItemGroup>
 
   <ItemGroup>

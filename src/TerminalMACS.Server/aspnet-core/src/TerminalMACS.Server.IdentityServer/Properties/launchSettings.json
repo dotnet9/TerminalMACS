@@ -3,8 +3,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:44387",
-      "sslPort": 44387
+      "applicationUrl": "https://localhost:44377",
+      "sslPort": 44377
     }
   },
   "profiles": {
@@ -18,7 +18,7 @@
     "TerminalMACS.Server.IdentityServer": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:44387",
+      "applicationUrl": "https://localhost:44377",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
