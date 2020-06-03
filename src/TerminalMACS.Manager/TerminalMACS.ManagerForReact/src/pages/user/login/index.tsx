@@ -3,7 +3,8 @@ import { Alert, Checkbox, message } from 'antd';
 import React, { useState } from 'react';
 import { Link, SelectLang, history, useModel } from 'umi';
 import { getPageQuery } from '@/utils/utils';
-import logo from '@/assets/logo.svg';
+import logo from '@/assets/logo.png';
+import logosvg from '@/assets/logo.svg';
 import { LoginParamsType, fakeAccountLogin } from '@/services/login';
 import LoginFrom from './components/Login';
 import styles from './style.less';
@@ -86,10 +87,10 @@ const Login: React.FC<{}> = () => {
           <div className={styles.header}>
             <Link to="/">
               <img alt="logo" className={styles.logo} src={logo} />
-              <span className={styles.title}>Ant Design</span>
+              <span className={styles.title}>TerminalMACS</span>
             </Link>
           </div>
-          <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+          <div className={styles.desc}>TerminalMACS是一个多终端项目</div>
         </div>
 
         <div className={styles.main}>
@@ -167,6 +168,7 @@ const Login: React.FC<{}> = () => {
             <Submit loading={submitting}>登录</Submit>
             <div className={styles.other}>
               其他登录方式
+              <img alt='TerminalMACS' src={logosvg} className={styles.loginicon} />
               <AlipayCircleOutlined className={styles.icon} />
               <TaobaoCircleOutlined className={styles.icon} />
               <WeiboCircleOutlined className={styles.icon} />
