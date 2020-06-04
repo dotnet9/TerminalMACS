@@ -43,10 +43,14 @@
             <Button HorizontalAlignment="Center" Content="登录" FontFamily="Impact" FontSize="18" Width="100" Background="#FF307CD6" BorderBrush="#FF307CD6" Click="Button_Click"/>
             <StackPanel Orientation="Horizontal" Margin="10,35">
                 <Label Content="第三方登录" Foreground="#707070" VerticalAlignment="Center"/>
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FF3D56AC" BorderBrush="#FF3D56AC" Margin="5,0"
+                        Click="LoginWithTerminal_Click">
+                    <Image Source="./../Images/logo.png" Width="18"/>
+                </Button>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FF3D56AC" BorderBrush="#FF3D56AC">
                     <materialDesign:PackIcon Kind="Wechat" VerticalAlignment="Center" Foreground="White"/>
                 </Button>
-                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Margin="15,0" Background="#FF01BAFF" BorderBrush="#FF01BAFF">
+                <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Margin="5,0" Background="#FF01BAFF" BorderBrush="#FF01BAFF">
                     <materialDesign:PackIcon Kind="Qqchat" VerticalAlignment="Center" Foreground="White"/>
                 </Button>
                 <Button HorizontalAlignment="Center" FontFamily="Impact" FontSize="18" Background="#FFE05959" BorderBrush="#FFE05959">

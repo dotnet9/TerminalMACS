@@ -23,11 +23,15 @@ namespace TerminalMACS.Views
             DragMove();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void LoginWithTerminal_Click(object sender, RoutedEventArgs e)
         {
             var options = new OidcClientOptions()
             {
-                Authority = "https://localhost:44387",
+                Authority = "https://localhost:44377",
                 ClientId = "Server_App",
                 Scope = "openid",
                 ClientSecret = "1q2w3e*",
