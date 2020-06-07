@@ -15,7 +15,7 @@ export default {
   },
   title: 'TerminalMACS',
   pwa: false,
-  iconfontUrl: '',
+  iconfontUrl: ''
 } as LayoutSettings & {
   pwa: boolean;
 };

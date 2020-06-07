@@ -77,6 +77,12 @@ export default defineConfig({
       component: './Grid/DynamicGridPage',
     },
     {
+      name: '电子地图',
+      icon: 'smile',
+      path: '/emappage',
+      component: './EMapPage',
+    },
+    {
       component: './404',
     },
   ],
