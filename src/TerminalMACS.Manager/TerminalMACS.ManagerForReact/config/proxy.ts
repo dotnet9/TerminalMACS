@@ -8,14 +8,14 @@
 export default {
   dev: {
     '/api/': {
-      target: 'https://api-react.dotnet9.com/',
+      target: 'http://localhost:5000/',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
   },
   test: {
     '/api/': {
-      target: 'https://api-react.dotnet9.com/',
+      target: 'http://localhost:5000/',
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
