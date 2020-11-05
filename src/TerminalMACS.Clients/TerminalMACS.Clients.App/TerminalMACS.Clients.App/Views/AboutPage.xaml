@@ -39,13 +39,13 @@
                 <Label Text="- TerminaMACS" FontAttributes="Bold" HorizontalOptions="End" Margin="0,0,50,50"/>
                 <Label Text="{x:Static resources:AppResource.WelcomeComments_AboutPage}"/>
                 <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.OfficialWebsite_AboutPage}"
-                        Command="{Binding RaiseOpenTerminalMACSWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
-                        TextColor="White" />
-                <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.CooperationWebsite_AboutPage}"
                         Command="{Binding RaiseOpenDotnet9WebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         TextColor="White" />
+                <!--Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.CooperationWebsite_AboutPage}"
+                        Command="{Binding RaiseOpenDotnet9WebCommand}"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" /-->
                 <Button Margin="0,10,0,0" Text="{x:Static resources:AppResource.ViewSourceCode_AboutPage}"
                         Command="{Binding RaiseOpenCurrentClientSourceWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
