@@ -111,13 +111,13 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TerminalMACS.Clients.App\TerminalMACS.Clients.App.csproj">
-      <Project>{9E12A243-D8B7-4FD6-9A05-14539883C4C4}</Project>
-      <Name>TerminalMACS.Clients.App</Name>
-    </ProjectReference>
+    <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo.png" />
+    <ProjectReference Include="..\TerminalMACS.Clients.AppClient\TerminalMACS.Clients.AppClient.csproj">
+      <Project>{c88c29cb-ea22-49da-8d1e-ee711ceb0b2f}</Project>
+      <Name>TerminalMACS.Clients.AppClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ProjectExtensions>

@@ -1,0 +1,105 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "TerminalMACS.Clients.AppClient/1.0.0": {
+        "dependencies": {
+          "Xam.Plugin.DeviceInfo": "4.1.1",
+          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Forms": "4.6.0.494-pre2"
+        },
+        "runtime": {
+          "TerminalMACS.Clients.AppClient.dll": {}
+        },
+        "resources": {
+          "zh-CN/TerminalMACS.Clients.AppClient.resources.dll": {
+            "locale": "zh-CN"
+          }
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Numerics.Vectors.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "Xam.Plugin.DeviceInfo/4.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Plugin.DeviceInfo.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Essentials/1.5.1": {
+        "dependencies": {
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Essentials.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/4.6.0.494-pre2": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.6.0.332"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.6.0.332"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "4.6.0.332"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TerminalMACS.Clients.AppClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
+    },
+    "Xam.Plugin.DeviceInfo/4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tBoWE60pwlUDK9f+X3CeFBVTpU+OuMel8Hfp7bxYnJKiGGQ2I3S+8ZF1lJSxvlQf0o8C/IjGnddUeDqwBmWZfg==",
+      "path": "xam.plugin.deviceinfo/4.1.1",
+      "hashPath": "xam.plugin.deviceinfo.4.1.1.nupkg.sha512"
+    },
+    "Xamarin.Essentials/1.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XEKAp7BXfZkTGbMqySXtuhwxb06ULjkJNQ8p44e8amOPm4m4VTVV92F13ov0a8NFNU+6JFm98510QK9Q/HBD5A==",
+      "path": "xamarin.essentials/1.5.1",
+      "hashPath": "xamarin.essentials.1.5.1.nupkg.sha512"
+    },
+    "Xamarin.Forms/4.6.0.494-pre2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qDeDqpe3yvWSMobkNUm4fT3M6xNBqGGIup2rf84ntk11WBaNkGXRqmJab2QZO2cUrH2dBVupkE0qO7xgxrdzjA==",
+      "path": "xamarin.forms/4.6.0.494-pre2",
+      "hashPath": "xamarin.forms.4.6.0.494-pre2.nupkg.sha512"
+    }
+  }
+}

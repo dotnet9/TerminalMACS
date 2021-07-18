@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "nVY12Qy/LFQlfReFWkohuQkp7Nalm9G2iJMRPaMqlZ7GFN8X/p6oT+ixtZpvuE5KNdRnlWNtpM0995i686Ekqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xam.plugin.deviceinfo\\4.1.1\\xam.plugin.deviceinfo.4.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.essentials\\1.5.1\\xamarin.essentials.1.5.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\xamarin.forms\\4.6.0.494-pre2\\xamarin.forms.4.6.0.494-pre2.nupkg.sha512"
+  ],
+  "logs": []
+}

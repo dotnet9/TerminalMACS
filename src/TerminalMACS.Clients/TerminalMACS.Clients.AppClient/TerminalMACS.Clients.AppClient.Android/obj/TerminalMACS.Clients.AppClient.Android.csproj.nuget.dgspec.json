@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.Android\\TerminalMACS.Clients.AppClient.Android.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.Android\\TerminalMACS.Clients.AppClient.Android.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.Android\\TerminalMACS.Clients.AppClient.Android.csproj",
+        "projectName": "TerminalMACS.Clients.AppClient.Android",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.Android\\TerminalMACS.Clients.AppClient.Android.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.Android\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid90"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid90": {
+            "projectReferences": {
+              "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid90": {
+          "dependencies": {
+            "Acr.UserDialogs": {
+              "target": "Package",
+              "version": "[7.1.0.442, )"
+            },
+            "Castle.Core": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Plugin.CurrentActivity": {
+              "target": "Package",
+              "version": "[2.1.0.4, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.6.0.494-pre2, )"
+            }
+          }
+        }
+      }
+    },
+    "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj",
+        "projectName": "TerminalMACS.Clients.AppClient",
+        "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\TerminalMACS\\src\\TerminalMACS.Clients\\TerminalMACS.Clients.AppClient\\TerminalMACS.Clients.AppClient\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Xam.Plugin.DeviceInfo": {
+              "target": "Package",
+              "version": "[4.1.1, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.6.0.494-pre2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.5.21302.13\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
